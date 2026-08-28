@@ -43,7 +43,3 @@ Thumbs.db
 gstack/
 .claude/*.local.json
 .claude/settings.local.json
-
-# Temporary staging / image processing dumps
-images/
-imagesssss/
