@@ -43,3 +43,7 @@ Thumbs.db
 gstack/
 .claude/*.local.json
 .claude/settings.local.json
+
+# Cloudflare Wrangler
+.wrangler/
+
