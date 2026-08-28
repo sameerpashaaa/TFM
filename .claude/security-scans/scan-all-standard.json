@@ -1,0 +1,483 @@
+{
+  "timestamp": "2026-08-18T14:36:24.276Z",
+  "target": ".",
+  "depth": "standard",
+  "type": "all",
+  "summary": {
+    "critical": 0,
+    "high": 23,
+    "medium": 55,
+    "low": 0,
+    "total": 78
+  },
+  "findings": [
+    {
+      "severity": "HIGH",
+      "type": "Dependency CVE",
+      "location": "package.json:nanoid",
+      "description": "nanoid: custom generators can loop "
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\browse\\test\\bridge-chromium-e2e.test.ts:123",
+      "description": "Hardcoded Password"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\browse\\test\\cookie-import-browser.test.ts:8",
+      "description": "Hardcoded Password"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\browse\\test\\cookie-import-browser.test.ts:25",
+      "description": "Hardcoded Password"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\browse\\test\\cookie-import-browser.test.ts:29",
+      "description": "Hardcoded Password"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\browse\\test\\path-validation.test.ts:170",
+      "description": "Slack Token"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\browse\\test\\proxy-redact.test.ts:51",
+      "description": "Hardcoded Password"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\test\\brain-sync.test.ts:288",
+      "description": "AWS Access Key"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\test\\brain-sync.test.ts:289",
+      "description": "GitHub Token"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\test\\brain-sync.test.ts:291",
+      "description": "API Key (Stripe/OpenAI)"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\test\\brain-sync.test.ts:322",
+      "description": "GitHub Token"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\test\\redact-engine.test.ts:108",
+      "description": "AWS Access Key"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\test\\redact-engine.test.ts:241",
+      "description": "AWS Access Key"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\test\\redact-engine.test.ts:284",
+      "description": "AWS Access Key"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\test\\redact-engine.test.ts:358",
+      "description": "AWS Access Key"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\test\\redact-engine.test.ts:382",
+      "description": "AWS Access Key"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\test\\secret-sink-harness.test.ts:146",
+      "description": "Hardcoded Password"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\test\\secret-sink-harness.test.ts:162",
+      "description": "Hardcoded Password"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\test\\skill-e2e-cso.test.ts:45",
+      "description": "API Key (Stripe/OpenAI)"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Hardcoded Secret",
+      "location": "gstack\\test\\skill-e2e-review-army.test.ts:504",
+      "description": "Hardcoded Password"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:370",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:414",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:418",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:422",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:431",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:445",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:468",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:481",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:493",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:508",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:520",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:542",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:634",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\browse\\src\\cookie-picker-ui.ts:652",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\browse\\test\\security-sidepanel-dom.test.ts:157",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\browse\\test\\security-sidepanel-dom.test.ts:160",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\browse\\test\\security-sidepanel-dom.test.ts:179",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\browse\\test\\security-sidepanel-dom.test.ts:216",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\browse\\test\\security-sidepanel-dom.test.ts:228",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\browse\\test\\security-sidepanel-dom.test.ts:264",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\browse\\test\\security-sidepanel-dom.test.ts:268",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\browse\\test\\security-sidepanel-dom.test.ts:275",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\browse\\test\\security-sidepanel-dom.test.ts:279",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\browse\\test\\security-sidepanel-dom.test.ts:318",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\browse\\test\\security-sidepanel-dom.test.ts:354",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\design\\src\\compare.ts:501",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\design\\src\\compare.ts:508",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\design\\src\\compare.ts:530",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\design\\src\\compare.ts:548",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\design\\src\\compare.ts:561",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\content.js:36",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\content.js:64",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:185",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:464",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:600",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:606",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:730",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:737",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:779",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:817",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:827",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:870",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:885",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:892",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:909",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\extension\\sidepanel.js:1112",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "innerHTML",
+      "location": "gstack\\lib\\diagram-render\\src\\entry.ts:151",
+      "description": "XSS risk with innerHTML"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\scripts\\resolvers\\testing.ts:312",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\scripts\\resolvers\\testing.ts:370",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Injection",
+      "location": "gstack\\test\\gbrain-supabase-provision.test.ts:367",
+      "description": "Possible SQL injection"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\test\\helpers\\touchfiles.ts:118",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\test\\redact-semantic-pass.eval.ts:2",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Injection",
+      "location": "gstack\\test\\secret-sink-harness.test.ts:148",
+      "description": "Possible SQL injection"
+    },
+    {
+      "severity": "HIGH",
+      "type": "SQL Injection",
+      "location": "gstack\\test\\secret-sink-harness.test.ts:163",
+      "description": "Possible SQL injection"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\test\\skill-e2e-plan-format.test.ts:54",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\test\\skill-e2e-plan-prosons.test.ts:22",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\test\\skill-llm-eval-spec.test.ts:2",
+      "description": "eval() can execute arbitrary code"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Eval Usage",
+      "location": "gstack\\test\\skill-llm-eval-spec.test.ts:25",
+      "description": "eval() can execute arbitrary code"
+    }
+  ]
+}
