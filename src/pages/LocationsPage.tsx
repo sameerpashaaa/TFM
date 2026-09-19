@@ -1,18 +1,22 @@
 import { MapPin, Clock, Phone } from 'lucide-react';
 
 const locations = [
-  { name: 'TFM Gourmet Tarneit', address: 'Tarneit Central Shopping Centre, Tarneit VIC 3029', phone: '(03) 9123 4567', hours: '8:00 AM – 8:00 PM (Daily)' },
-  { name: 'TFM Gourmet Werribee', address: 'Watton Street Butchery, Werribee VIC 3030', phone: '(03) 9123 4568', hours: '8:00 AM – 8:00 PM (Daily)' },
-  { name: 'TFM Melbourne Headquarters & Processing', address: 'Industrial Park Drive, Truganina VIC 3029', phone: '(03) 9123 4500', hours: '6:00 AM – 6:00 PM (Mon-Sat)' }
+  {
+    name: 'Tarneit Fresh Meats',
+    address: 'Shop 6, 747 Tarneit Rd, Tarneit VIC 3020',
+    phone: '0403 153 872',
+    hours: '7 Days a Week – Call for Hours',
+    mapLink: 'https://maps.google.com/?q=747+Tarneit+Rd+Tarneit+VIC+3020',
+  },
 ];
 
 export default function LocationsPage() {
   return (
     <div style={{ background: '#F7F2EB', minHeight: '100vh', paddingTop: 40, paddingBottom: 60 }}>
       <div className="container" style={{ maxWidth: 900 }}>
-        <div className="section-label">VISIT OUR STORES</div>
-        <h1 style={{ textAlign: 'center', fontSize: 40, fontWeight: 600, letterSpacing: '-0.025em', marginBottom: 14 }}>Store Locations</h1>
-        <p style={{ textAlign: 'center', color: '#7C7268', marginBottom: 40 }}>Find Tarneitfresh Meat gourmet retail shops and fulfillment centers near you.</p>
+        <div className="section-label">VISIT OUR STORE</div>
+        <h1 style={{ textAlign: 'center', fontSize: 40, fontWeight: 600, letterSpacing: '-0.025em', marginBottom: 14 }}>Store Location</h1>
+        <p style={{ textAlign: 'center', color: '#7C7268', marginBottom: 40 }}>Find Tarneit Fresh Meats – your local halal butcher in Tarneit, Victoria.</p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
           {locations.map((loc, i) => (
@@ -28,11 +32,33 @@ export default function LocationsPage() {
                   <div style={{ display: 'flex', gap: 8 }}><Phone size={16} style={{ marginTop: 2, flexShrink: 0 }} /> {loc.phone}</div>
                 </div>
               </div>
-              <button className="btn-red-outline" style={{ marginTop: 8 }}>
+              <a
+                href={loc.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-red-outline"
+                style={{ marginTop: 8, textDecoration: 'none', display: 'inline-block', padding: '10px 18px', whiteSpace: 'nowrap' }}
+              >
                 Get Directions
-              </button>
+              </a>
             </div>
           ))}
+        </div>
+
+        {/* Map embed placeholder */}
+        <div style={{ marginTop: 40, borderRadius: 20, overflow: 'hidden', border: '1px solid #E8DFD4', height: 300, background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ textAlign: 'center', color: '#7C7268' }}>
+            <MapPin size={40} color="var(--crimson)" style={{ margin: '0 auto 12px' }} />
+            <p style={{ fontWeight: 600 }}>747 Tarneit Rd, Tarneit VIC 3020</p>
+            <a
+              href="https://maps.google.com/?q=747+Tarneit+Rd+Tarneit+VIC+3020"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--crimson)', fontSize: 14, fontWeight: 600 }}
+            >
+              Open in Google Maps →
+            </a>
+          </div>
         </div>
       </div>
     </div>

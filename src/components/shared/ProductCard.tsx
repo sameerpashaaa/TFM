@@ -108,26 +108,44 @@ export default function ProductCard({ product, compact = false }: Props) {
           <span style={{ fontSize: 11, color: '#7C7268' }}>({product.reviewCount})</span>
         </div>
 
-        {/* Price */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ fontSize: 12, color: '#7C7268', fontWeight: 500 }}>FROM</span>
-          <span style={{ fontSize: 14, fontWeight: 800, color: 'var(--crimson)' }}>$ {product.price.toFixed(2)}</span>
-          {product.originalPrice && (
-            <span style={{ fontSize: 12, color: '#8A8074', textDecoration: 'line-through' }}>
-              $ {product.originalPrice.toFixed(2)}
+        {/* Price or Enquire */}
+        {product.enquireOnly ? (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ fontSize: 12, background: '#FBF0E9', color: 'var(--crimson)', fontWeight: 700, padding: '3px 10px', borderRadius: 20, border: '1px solid #F2D5C4' }}>
+              Price on Enquiry
             </span>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ fontSize: 12, color: '#7C7268', fontWeight: 500 }}>FROM</span>
+            <span style={{ fontSize: 14, fontWeight: 800, color: 'var(--crimson)' }}>$ {product.price.toFixed(2)}</span>
+            {product.originalPrice && (
+              <span style={{ fontSize: 12, color: '#8A8074', textDecoration: 'line-through' }}>
+                $ {product.originalPrice.toFixed(2)}
+              </span>
+            )}
+          </div>
+        )}
 
-        {/* Quick Add */}
+        {/* Quick Add / Enquire */}
         <div style={{ display: 'flex', gap: 6, marginTop: 4 }}>
-          <button
-            onClick={handleAddToCart}
-            className="btn-red"
-            style={{ flex: 1, fontSize: 12, padding: '8px 12px', border: 'none', cursor: 'pointer' }}
-          >
-            Add to Cart
-          </button>
+          {product.enquireOnly ? (
+            <a
+              href="tel:0403153872"
+              className="btn-red"
+              style={{ flex: 1, fontSize: 12, padding: '8px 12px', border: 'none', cursor: 'pointer', textDecoration: 'none', textAlign: 'center' }}
+            >
+              Enquire
+            </a>
+          ) : (
+            <button
+              onClick={handleAddToCart}
+              className="btn-red"
+              style={{ flex: 1, fontSize: 12, padding: '8px 12px', border: 'none', cursor: 'pointer' }}
+            >
+              Add to Cart
+            </button>
+          )}
           <Link
             to={`/products/${product.slug}`}
             style={{
