@@ -36,28 +36,33 @@ function WhatsApp({ size = 18 }) {
 
 export default function Footer() {
   return (
-    <footer style={{ background: 'var(--footer-bg)', color: '#fff', paddingTop: 48, paddingBottom: 0 }}>
+    <footer style={{ background: 'var(--footer-bg)', color: '#fff', paddingTop: 48, paddingBottom: 0, borderTop: '4px solid var(--accent-premium)' }}>
       <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: 40, paddingBottom: 40 }}>
 
-        {/* Brand */}
+        {/* Brand & Contact */}
         <div>
           <div style={{ fontWeight: 900, fontSize: 22, letterSpacing: 1, marginBottom: 4 }}>TARNEIT</div>
-          <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 8 }}>Tarneitfresh Meat</div>
-          <p style={{ color: 'rgba(255,255,255,.55)', fontSize: 13, lineHeight: 1.6, marginBottom: 12 }}>
+          <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 16, color: 'var(--accent-premium)' }}>Tarneitfresh Meat</div>
+          <p style={{ color: 'rgba(255,255,255,.7)', fontSize: 13, lineHeight: 1.6, marginBottom: 16 }}>
             SHS TOWER – SUITE 81, GHALA, MUSCAT, OMAN
           </p>
-          <div style={{ fontSize: 13, color: 'rgba(255,255,255,.7)', lineHeight: 2 }}>
-            <div><span style={{ fontWeight: 600, color: '#fff' }}>Email:</span> contactus@tarneitfreshmeat.com</div>
-            <div><span style={{ fontWeight: 600, color: '#fff' }}>Whatsapp:</span> 92423242</div>
-            <div><span style={{ fontWeight: 600, color: '#fff' }}>Telephone:</span> 24026400</div>
+          <div style={{ fontSize: 13, color: 'rgba(255,255,255,.7)', lineHeight: 2, marginBottom: 16 }}>
+            <div><span style={{ fontWeight: 600, color: '#fff' }}>Email:</span> <a href="mailto:contactus@tarneitfreshmeat.com" style={{ color: 'inherit', textDecoration: 'none' }}>contactus@tarneitfreshmeat.com</a></div>
+            <div><span style={{ fontWeight: 600, color: '#fff' }}>Whatsapp:</span> <a href="https://wa.me/96892423242" style={{ color: 'inherit', textDecoration: 'none' }}>+968 9242 3242</a></div>
+            <div><span style={{ fontWeight: 600, color: '#fff' }}>Telephone:</span> <a href="tel:24026400" style={{ color: 'inherit', textDecoration: 'none' }}>24026400</a></div>
+          </div>
+          
+          <div>
+            <div style={{ fontWeight: 600, fontSize: 13, color: '#fff', marginBottom: 4 }}>Business Hours:</div>
+            <div style={{ fontSize: 13, color: 'rgba(255,255,255,.7)' }}>Mon - Sun: 8:00 AM - 10:00 PM</div>
           </div>
 
           {/* Social */}
-          <div style={{ display: 'flex', gap: 12, marginTop: 16 }}>
+          <div style={{ display: 'flex', gap: 12, marginTop: 24 }}>
             {[
               { icon: <FacebookIcon size={16} />, href: '#' },
               { icon: <InstagramIcon size={16} />, href: '#' },
-              { icon: <WhatsApp size={16} />, href: '#' },
+              { icon: <WhatsApp size={16} />, href: 'https://wa.me/96892423242' },
               { icon: <LinkedinIcon size={16} />, href: '#' },
             ].map((s, i) => (
               <a key={i} href={s.href} style={{
@@ -73,34 +78,46 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* About TFM */}
+        {/* Quick Links */}
         <div>
-          <h4 style={{ fontWeight: 700, marginBottom: 16, fontSize: 14, letterSpacing: .5 }}>About TFM</h4>
-          {[
-            { label: 'Our Story', to: '/about' },
-            { label: 'Careers', to: '/careers' },
-            { label: 'Rewards', to: '/rewards' },
-            { label: 'Store Locations', to: '/locations' },
-            { label: 'TFM Blogs', to: '/blogs' },
-            { label: 'Customer Reviews', to: '/reviews' },
-          ].map(l => (
-            <Link key={l.label} to={l.to} className="footer-link">{l.label}</Link>
-          ))}
+          <h4 style={{ fontWeight: 700, marginBottom: 16, fontSize: 15, letterSpacing: .5 }}>Quick Links</h4>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {[
+              { label: 'About Us', to: '/about' },
+              { label: 'Delivery Policy', to: '/delivery' },
+              { label: 'Returns & Quality Guarantee', to: '/returns' },
+              { label: 'FAQs', to: '/faqs' },
+              { label: 'Terms of Service', to: '/terms' },
+              { label: 'Privacy Policy', to: '/privacy' },
+            ].map(l => (
+              <Link key={l.label} to={l.to} style={{ color: 'rgba(255,255,255,.7)', fontSize: 13, textDecoration: 'none', transition: 'color 0.2s' }} 
+                onMouseEnter={e => e.currentTarget.style.color = '#fff'}
+                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,.7)'}>
+                {l.label}
+              </Link>
+            ))}
+          </div>
         </div>
 
-        {/* Customer Care */}
+        {/* Delivery Areas & Payments */}
         <div>
-          <h4 style={{ fontWeight: 700, marginBottom: 16, fontSize: 14, letterSpacing: .5 }}>Customer Care</h4>
-          {[
-            { label: 'FAQs', to: '/faqs' },
-            { label: 'Contact Us', to: '/contact' },
-            { label: 'Delivery Info', to: '/faqs' },
-            { label: 'Refund & Return Policy', to: '/faqs' },
-            { label: 'Terms of Service', to: '/faqs' },
-            { label: 'Privacy Policy', to: '/faqs' },
-          ].map(l => (
-            <Link key={l.label} to={l.to} className="footer-link">{l.label}</Link>
-          ))}
+          <h4 style={{ fontWeight: 700, marginBottom: 16, fontSize: 15, letterSpacing: .5 }}>Delivery Areas</h4>
+          <p style={{ color: 'rgba(255,255,255,.7)', fontSize: 13, lineHeight: 1.6, marginBottom: 24 }}>
+            We currently deliver to major neighborhoods across Muscat, including: Al Mouj, Azaiba, Ghubra, Qurum, Madinat Al Sultan Qaboos, Seeb, and Al Khoud.
+          </p>
+          
+          <h4 style={{ fontWeight: 700, marginBottom: 16, fontSize: 15, letterSpacing: .5 }}>Secure Payments</h4>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+            <div style={{ padding: '6px 10px', background: '#fff', borderRadius: 4, display: 'flex', alignItems: 'center' }}>
+              <span style={{ color: '#1434CB', fontWeight: 800, fontSize: 11, fontStyle: 'italic' }}>VISA</span>
+            </div>
+            <div style={{ padding: '6px 10px', background: '#fff', borderRadius: 4, display: 'flex', alignItems: 'center' }}>
+              <span style={{ color: '#EB001B', fontWeight: 800, fontSize: 11 }}>MasterCard</span>
+            </div>
+            <div style={{ padding: '6px 10px', background: '#fff', borderRadius: 4, display: 'flex', alignItems: 'center' }}>
+              <span style={{ color: '#005EA6', fontWeight: 800, fontSize: 11 }}>PayPal</span>
+            </div>
+          </div>
         </div>
 
         {/* Newsletter */}
@@ -127,9 +144,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div style={{ borderTop: '1px solid rgba(255,255,255,.08)', padding: '16px 0', textAlign: 'center' }}>
+      <div style={{ borderTop: '1px solid rgba(255,255,255,.08)', padding: '20px 0', textAlign: 'center' }}>
         <p style={{ color: 'rgba(255,255,255,.4)', fontSize: 12 }}>
-          © 2026 Tarneitfresh Meat Store. All rights reserved. | Powered by TFM
+          © {new Date().getFullYear()} Tarneitfresh Meat Store. All rights reserved. | Powered by TFM
         </p>
       </div>
 

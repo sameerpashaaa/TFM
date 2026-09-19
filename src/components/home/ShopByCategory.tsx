@@ -2,64 +2,71 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import CategoryArt from '../shared/CategoryArt';
 
 const cats = [
   {
     slug: 'all-beef',
     name: 'All Beef',
     sub: 'Wagyu · Angus · Grass-Fed',
-    color: '#C4522A',
-    accent: '#E2673A',
+    img: 'https://images.unsplash.com/photo-1603048297172-c92544798d5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    cta: 'Shop Beef →',
+    priceFrom: '3.500',
   },
   {
     slug: 'all-lamb',
     name: 'All Lamb',
     sub: 'NZ · AUS · Omani',
-    color: '#1c1917',
-    accent: '#78350f',
+    img: 'https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    cta: 'Shop Lamb →',
+    priceFrom: '4.200',
   },
   {
     slug: 'mls-poultry',
     name: 'TFM Poultry',
     sub: 'Chicken · Camel',
-    color: '#14532d',
-    accent: '#166534',
+    img: 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    cta: 'Explore →',
+    priceFrom: '1.800',
   },
   {
     slug: 'whole-carcass',
     name: 'Whole Carcass',
     sub: 'Lamb · Beef · Camel',
-    color: '#1e1b4b',
-    accent: '#312e81',
+    img: 'https://images.unsplash.com/photo-1607532941433-304659e8198a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    cta: 'View Collection →',
+    priceFrom: '45.000',
   },
   {
     slug: 'box-collection',
     name: 'Box Collection',
     sub: 'Value · Party · Family',
-    color: '#7c2d12',
-    accent: '#9a3412',
+    img: 'https://images.unsplash.com/photo-1558030006-450675393462?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    cta: 'Shop Boxes →',
+    priceFrom: '12.000',
   },
   {
     slug: 'seasoned',
     name: 'Seasoned',
     sub: 'Mishkak · Kofta · Rubs',
-    color: '#713f12',
-    accent: '#92400e',
+    img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    cta: 'Explore →',
+    priceFrom: '2.500',
   },
   {
     slug: 'dry-aged-beef',
     name: 'Dry Aged Beef',
     sub: 'Tomahawk · Ribeye',
-    color: '#450a0a',
-    accent: '#C4522A',
+    img: 'https://images.unsplash.com/photo-1594046243098-0fceea9d451e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    cta: 'Shop Premium →',
+    priceFrom: '8.500',
   },
   {
     slug: 'dry-aged-lamb',
     name: 'Dry Aged Lamb',
     sub: 'Rack · Chops · Shoulder',
-    color: '#1c1917',
-    accent: '#44403c',
+    img: 'https://images.unsplash.com/photo-1615937691194-97dbd3f3dc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    cta: 'View Collection →',
+    priceFrom: '9.000',
   },
 ];
 
@@ -72,118 +79,92 @@ function CategoryCard({ cat, index }: { cat: typeof cats[0]; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.4, delay: index * 0.05, ease: 'easeOut' }}
-      style={{ position: 'relative' }}
     >
       <Link to={`/collections/${cat.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
         <motion.div
           onHoverStart={() => setHovered(true)}
           onHoverEnd={() => setHovered(false)}
+          className="surface"
           style={{
             position: 'relative',
-            borderRadius: 16,
+            borderRadius: 'var(--r-sm)',
             overflow: 'hidden',
-            height: 210,
             cursor: 'pointer',
-            border: '1px solid #E8DFD4',
-            boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
+            display: 'flex',
+            flexDirection: 'column',
           }}
-          whileHover={{ scale: 1.02, boxShadow: '0 10px 30px rgba(0,0,0,0.12)' }}
+          whileHover={{ y: -3, boxShadow: 'var(--shadow-lift)' }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
-          {/* Plain backdrop */}
-          <div style={{ position: 'absolute', inset: 0, background: '#fff' }} />
+          {/* Image Area - 4:3 */}
+          <div style={{ position: 'relative', aspectRatio: '4/3', overflow: 'hidden' }}>
+            <motion.img 
+              src={cat.img} 
+              alt={cat.name}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              animate={{ scale: hovered ? 1.05 : 1 }}
+              transition={{ duration: 0.4 }}
+            />
+            
+            {/* Top badge */}
+            <div style={{
+              position: 'absolute', top: 12, left: 12,
+              background: 'var(--bg)',
+              border: '1px solid var(--border)',
+              borderRadius: 'var(--r-pill)',
+              padding: '4px 10px',
+              fontSize: 10,
+              fontWeight: 700,
+              color: 'var(--accent-deep)',
+              letterSpacing: 0.5,
+              textTransform: 'uppercase',
+            }}>
+              {cat.slug.includes('dry') ? '🥩 Artisan' : cat.slug.includes('box') ? '📦 Value' : cat.slug.includes('seasoned') ? '🌿 Marinated' : '⭐ Premium'}
+            </div>
+          </div>
 
-          {/* Illustration — idle float, lifts on hover */}
-          <motion.div
-            style={{
-              position: 'absolute',
-              top: '14%', left: '50%', width: '44%',
-              translateX: '-50%',
-              filter: 'drop-shadow(0 3px 7px rgba(0,0,0,0.10))',
-            }}
-            animate={{
-              y: hovered ? -10 : [0, -6, 0],
-              scale: hovered ? 1.08 : 1,
-              rotate: hovered ? -3 : 0,
-            }}
-            transition={hovered
-              ? { duration: 0.35, ease: 'easeOut' }
-              : { y: { duration: 4 + index * 0.3, repeat: Infinity, ease: 'easeInOut' }, duration: 0.4 }}
-          >
-            <CategoryArt slug={cat.slug} />
-          </motion.div>
-
-          {/* Content */}
-          <div style={{
-            position: 'absolute', inset: 0,
-            display: 'flex', flexDirection: 'column',
-            justifyContent: 'flex-end',
-            padding: '20px 18px',
-            gap: 4,
-          }}>
-            {/* Category name */}
-            <motion.div
-              animate={{ y: hovered ? -6 : 0 }}
-              transition={{ duration: 0.3 }}
-            >
+          {/* Content Area */}
+          <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div>
               <div style={{
-                color: '#1B1714',
+                color: 'var(--text-primary)',
                 fontSize: 18,
-                fontWeight: 800,
-                letterSpacing: 0.4,
-                lineHeight: 1.2,
+                fontWeight: 700,
+                letterSpacing: '-0.01em',
               }}>
                 {cat.name}
               </div>
               <div style={{
-                color: '#7C7268',
-                fontSize: 12,
+                color: 'var(--text-secondary)',
+                fontSize: 13,
                 fontWeight: 500,
-                marginTop: 3,
-                letterSpacing: 0.3,
+                marginTop: 2,
               }}>
                 {cat.sub}
               </div>
-            </motion.div>
+            </div>
 
-            {/* Shop Now button — present immediately, lifts with the card. */}
-            <motion.div
-              animate={{ y: hovered ? -2 : 0 }}
-              transition={{ duration: 0.25 }}
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: 6,
-                marginTop: 8,
-                background: 'var(--crimson)',
-                color: '#fff',
-                border: 'none',
-                borderRadius: 20,
-                padding: '6px 14px',
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: 0.4,
-                width: 'fit-content',
-                boxShadow: '0 2px 10px rgba(0,0,0,0.18)',
-                cursor: 'pointer',
-              }}
-            >
-              Shop Now <ArrowRight size={13} />
-            </motion.div>
-          </div>
+            <div style={{
+              color: 'var(--text-muted)',
+              fontSize: 12,
+              fontWeight: 600,
+            }}>
+              From OMR {cat.priceFrom}/kg
+            </div>
 
-          {/* Top badge */}
-          <div style={{
-            position: 'absolute', top: 12, left: 12,
-            background: '#F2EBE2',
-            border: '1px solid #E8DFD4',
-            borderRadius: 20,
-            padding: '3px 10px',
-            fontSize: 10,
-            fontWeight: 700,
-            color: '#5E554C',
-            letterSpacing: 0.8,
-            textTransform: 'uppercase',
-          }}>
-            {cat.slug.includes('dry') ? '🥩 Artisan' : cat.slug.includes('box') ? '📦 Value' : cat.slug.includes('seasoned') ? '🌿 Marinated' : '⭐ Premium'}
+            <div style={{
+              display: 'inline-flex', alignItems: 'center', gap: 4,
+              marginTop: 4,
+              color: 'var(--crimson)',
+              fontSize: 13,
+              fontWeight: 600,
+              letterSpacing: 0.2,
+            }}>
+              {cat.cta} 
+              <motion.div animate={{ x: hovered ? 4 : 0 }} transition={{ duration: 0.2 }}>
+                <ArrowRight size={14} />
+              </motion.div>
+            </div>
           </div>
         </motion.div>
       </Link>
@@ -193,7 +174,7 @@ function CategoryCard({ cat, index }: { cat: typeof cats[0]; index: number }) {
 
 export default function ShopByCategory() {
   return (
-    <section style={{ background: '#F7F2EB', padding: '60px 0 72px' }}>
+    <section style={{ padding: '64px 0' }}>
       <div className="container">
         {/* Section header */}
         <motion.div
@@ -203,17 +184,11 @@ export default function ShopByCategory() {
           transition={{ duration: 0.5 }}
           style={{ textAlign: 'center', marginBottom: 40 }}
         >
-          <div className="section-label">Browse the Butcher</div>
-          <h2 style={{
-            fontSize: 'clamp(28px, 4vw, 42px)',
-            fontWeight: 600,
-            color: '#1B1714',
-            letterSpacing: '-0.025em',
-            margin: 0,
-          }}>
+          <div className="section-label" style={{ color: 'var(--accent-deep)' }}>Browse the Butcher</div>
+          <h2 className="section-title" style={{ fontFamily: 'var(--font-serif)', margin: 0 }}>
             Shop by Category
           </h2>
-          <p style={{ color: '#7C7268', fontSize: 15, marginTop: 8, maxWidth: 480, margin: '8px auto 0' }}>
+          <p style={{ color: 'var(--text-secondary)', fontSize: 16, marginTop: 8, maxWidth: 480, margin: '8px auto 0' }}>
             Every cut, every origin — delivered fresh within hours across Muscat.
           </p>
         </motion.div>
@@ -222,7 +197,7 @@ export default function ShopByCategory() {
         <div className="shop-cat-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(4, 1fr)',
-          gap: 16,
+          gap: '24px',
         }}>
           {cats.map((cat, i) => (
             <CategoryCard key={cat.slug} cat={cat} index={i} />
@@ -232,15 +207,16 @@ export default function ShopByCategory() {
 
       <style>{`
         @media (max-width: 1100px) {
-          .shop-cat-grid { grid-template-columns: repeat(3, 1fr) !important; }
+          .shop-cat-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 16px !important; }
         }
         @media (max-width: 768px) {
           .shop-cat-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
         @media (max-width: 480px) {
-          .shop-cat-grid { grid-template-columns: 1fr 1fr !important; }
+          .shop-cat-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </section>
   );
 }
+

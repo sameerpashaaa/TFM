@@ -1,9 +1,11 @@
 import HeroBanner from '../components/home/HeroBanner';
 import ShopByCategory from '../components/home/ShopByCategory';
-import Testimonials from '../components/home/Testimonials';
 import BestSellers from '../components/home/BestSellers';
-import ShopByOrigin from '../components/home/ShopByOrigin';
+import OffersBundle from '../components/home/OffersBundle';
 import ShopByCuts from '../components/home/ShopByCuts';
+import WhyChooseUs from '../components/home/WhyChooseUs';
+import ShopByOrigin from '../components/home/ShopByOrigin';
+import Testimonials from '../components/home/Testimonials';
 import BlogSection from '../components/home/BlogSection';
 
 export default function HomePage() {
@@ -11,10 +13,12 @@ export default function HomePage() {
     <>
       <HeroBanner />
       <ShopByCategory />
-      <Testimonials />
       <BestSellers />
-      <ShopByOrigin />
+      <OffersBundle />
       <ShopByCuts />
+      <WhyChooseUs />
+      <ShopByOrigin />
+      <Testimonials />
       <BlogSection />
     </>
   );

@@ -32,34 +32,34 @@ export default function BlogSection() {
   const ref = useRef<HTMLDivElement>(null);
 
   return (
-    <section style={{ background: '#fff', padding: '52px 0' }}>
+    <section style={{ padding: '64px 0' }}>
       <div className="container">
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 28 }}>
+        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 32 }}>
           <div>
-            <div className="section-label" style={{ justifyContent: 'flex-start' }}>FROM OUR KITCHEN</div>
-            <h2 style={{ fontSize: 'clamp(20px, 3vw, 26px)', fontWeight: 800 }}>Latest Articles</h2>
+            <div className="section-label" style={{ color: 'var(--accent-deep)', textAlign: 'left' }}>FROM OUR KITCHEN</div>
+            <h2 className="section-title" style={{ fontFamily: 'var(--font-serif)', margin: 0, textAlign: 'left' }}>Latest Articles</h2>
           </div>
           <Link to="/blogs" style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--crimson)', fontWeight: 700, fontSize: 13, textDecoration: 'none' }}>
             View all articles <ArrowRight size={14} />
           </Link>
         </div>
 
-        <div ref={ref} style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
+        <div ref={ref} className="blog-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
           {blogs.map((b, i) => (
-            <Link key={b.id} to={`/blogs/${b.slug}`} className="blog-card" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div style={{ height: 160, overflow: 'hidden', position: 'relative' }}>
-                <img src={b.image} alt={b.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            <Link key={b.id} to={`/blogs/${b.slug}`} className="surface" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', overflow: 'hidden', padding: 0 }}>
+              <div style={{ aspectRatio: '4/3', width: '100%', overflow: 'hidden', position: 'relative' }}>
+                <img src={b.image} alt={b.title} style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'relative', zIndex: 1 }}
                   onError={e => { e.currentTarget.style.display = 'none'; }}/>
-                <div style={{ position: 'absolute', inset: 0 }}>
+                <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
                   <BlogPlaceholder index={i} />
                 </div>
               </div>
-              <div style={{ padding: '16px 16px 20px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#8A8074', fontSize: 11, marginBottom: 8 }}>
-                  <Calendar size={11} />
+              <div style={{ padding: '20px 20px 24px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--text-muted)', fontSize: 11, marginBottom: 12 }}>
+                  <Calendar size={12} />
                   {b.date}
                 </div>
-                <h3 style={{ fontSize: 14, fontWeight: 700, lineHeight: 1.45, marginBottom: 12, color: '#1B1714' }}>{b.title}</h3>
+                <h3 style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.4, marginBottom: 16, color: 'var(--text-primary)', flex: 1 }}>{b.title}</h3>
                 <span style={{ color: 'var(--crimson)', fontSize: 13, fontWeight: 700, display: 'flex', alignItems: 'center', gap: 4 }}>
                   Read more <ArrowRight size={12} />
                 </span>

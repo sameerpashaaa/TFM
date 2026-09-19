@@ -94,10 +94,10 @@ export const navCategories: NavCategory[] = [
 ];
 
 export const origins = {
-  beef: ['Australian Beef'],
-  lamb: ['Australian Lamb'],
-  chicken: ['Australian Chicken'],
-  fish: ['Fresh Fish'],
+  beef: ['Australian Beef', 'Wagyu Beef', 'Angus Reserve'],
+  lamb: ['Australian Lamb', 'NZ Spring Lamb', 'Omani Local Lamb'],
+  chicken: ['Local Fresh Chicken', 'Premium Free-Range', 'Corn-Fed Chicken'],
+  fish: ['Fresh Local Catch', 'Norwegian Salmon', 'Indian Ocean Tuna'],
 };
 
 export const cuts = ['Fillets', 'Steak', 'Whole', 'Mince', 'Curry Pieces', 'Boneless', 'Leg', 'Shoulder', 'Drumsticks', 'Wings', 'Cutlets'];
