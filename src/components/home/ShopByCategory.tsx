@@ -8,7 +8,8 @@ const cats = [
     slug: 'all-beef',
     name: 'All Beef',
     sub: 'Wagyu · Angus · Grass-Fed',
-    img: 'https://images.unsplash.com/photo-1603048297172-c92544798d5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    // Raw beef steaks on dark background
+    img: 'https://images.unsplash.com/photo-1546833998-877b37c2e5c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Shop Beef →',
     priceFrom: '3.500',
   },
@@ -16,7 +17,8 @@ const cats = [
     slug: 'all-lamb',
     name: 'All Lamb',
     sub: 'NZ · AUS · Omani',
-    img: 'https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    // Lamb chops / rack of lamb
+    img: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Shop Lamb →',
     priceFrom: '4.200',
   },
@@ -24,7 +26,8 @@ const cats = [
     slug: 'mls-poultry',
     name: 'TFM Poultry',
     sub: 'Chicken · Camel',
-    img: 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    // Fresh whole chicken
+    img: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Explore →',
     priceFrom: '1.800',
   },
@@ -32,7 +35,8 @@ const cats = [
     slug: 'whole-carcass',
     name: 'Whole Carcass',
     sub: 'Lamb · Beef · Camel',
-    img: 'https://images.unsplash.com/photo-1607532941433-304659e8198a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    // Butcher shop / hanging meat
+    img: 'https://images.unsplash.com/photo-1448907503123-67254d59ca4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'View Collection →',
     priceFrom: '45.000',
   },
@@ -40,7 +44,8 @@ const cats = [
     slug: 'box-collection',
     name: 'Box Collection',
     sub: 'Value · Party · Family',
-    img: 'https://images.unsplash.com/photo-1558030006-450675393462?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    // BBQ platter / meat spread
+    img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Shop Boxes →',
     priceFrom: '12.000',
   },
@@ -48,7 +53,8 @@ const cats = [
     slug: 'seasoned',
     name: 'Seasoned',
     sub: 'Mishkak · Kofta · Rubs',
-    img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    // Marinated grilled meat / skewers
+    img: 'https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Explore →',
     priceFrom: '2.500',
   },
@@ -56,7 +62,8 @@ const cats = [
     slug: 'dry-aged-beef',
     name: 'Dry Aged Beef',
     sub: 'Tomahawk · Ribeye',
-    img: 'https://images.unsplash.com/photo-1594046243098-0fceea9d451e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    // Premium thick-cut steaks
+    img: 'https://images.unsplash.com/photo-1588347818036-c3fb38dd9b7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Shop Premium →',
     priceFrom: '8.500',
   },
@@ -64,11 +71,13 @@ const cats = [
     slug: 'dry-aged-lamb',
     name: 'Dry Aged Lamb',
     sub: 'Rack · Chops · Shoulder',
+    // Lamb rack / chops up close
     img: 'https://images.unsplash.com/photo-1615937691194-97dbd3f3dc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'View Collection →',
     priceFrom: '9.000',
   },
 ];
+
 
 function CategoryCard({ cat, index }: { cat: typeof cats[0]; index: number }) {
   const [hovered, setHovered] = useState(false);
