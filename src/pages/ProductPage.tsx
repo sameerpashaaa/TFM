@@ -148,7 +148,7 @@ export default function ProductPage() {
 
               {/* Origin flag */}
               <div style={{ position: 'absolute', bottom: 12, right: 12, fontSize: 28, zIndex: 2 }}>
-                {product.origin === 'Australia' ? '🇦🇺' : product.origin === 'New Zealand' ? '🇳🇿' : product.origin === 'Oman' ? '🇴🇲' : '🌍'}
+                {product.origin === 'Australia' ? '🇦🇺' : product.origin === 'New Zealand' ? '🇳🇿' : '🌍'}
               </div>
               {/* TFM watermark */}
               <div style={{ position: 'absolute', top: 12, right: 12, opacity: .35, zIndex: 2 }}>
@@ -359,7 +359,7 @@ export default function ProductPage() {
                 </tbody>
               </table>
             )}
-            {activeTab === 2 && <p>We deliver across Muscat within 1 hour. Delivery is available 7 days a week. Standard delivery: FREE on all orders. Whole carcass orders include FREE 2x AUS Grass-Fed Burger Patties. All meat is packed in insulated thermal packaging to maintain freshness.</p>}
+            {activeTab === 2 && <p>We deliver across Melbourne within 1 hour. Delivery is available 7 days a week. Standard delivery: FREE on all orders. Whole carcass orders include FREE 2x AUS Grass-Fed Burger Patties. All meat is packed in insulated thermal packaging to maintain freshness.</p>}
           </div>
         </div>
 

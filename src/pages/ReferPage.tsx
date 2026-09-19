@@ -47,7 +47,7 @@ export default function ReferPage() {
           <h4 style={{ fontWeight: 700, color: '#1B1714', marginBottom: 8 }}>Terms & Conditions</h4>
           <ul style={{ paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 6 }}>
             <li>Referral discount applies to new customers ordering for the first time.</li>
-            <li>Minimum order value for referral discount is OMR 10.000.</li>
+            <li>Minimum order value for referral discount is $50.00.</li>
             <li>Referral credits will be applied automatically to your wallet after successful delivery to your friend.</li>
             <li>Credits are valid for 90 days from the date of issuance.</li>
           </ul>

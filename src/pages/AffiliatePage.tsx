@@ -6,13 +6,13 @@ export default function AffiliatePage() {
       <div className="container" style={{ maxWidth: 900 }}>
         <div className="section-label">PARTNERSHIP</div>
         <h1 style={{ textAlign: 'center', fontSize: 40, fontWeight: 600, letterSpacing: '-0.025em', marginBottom: 14 }}>Make Money with TFM</h1>
-        <p style={{ textAlign: 'center', color: '#7C7268', marginBottom: 40 }}>Become a TFM affiliate partner. Promote Oman\'s finest premium meats to your followers and earn commissions on every sale.</p>
+        <p style={{ textAlign: 'center', color: '#7C7268', marginBottom: 40 }}>Become a TFM affiliate partner. Promote Melbourne\'s finest premium meats to your followers and earn commissions on every sale.</p>
 
         {/* Benefits Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16, marginBottom: 40 }}>
           {[
             { icon: <Percent size={28} color="var(--crimson)" />, title: 'Up to 10% Commission', desc: 'Earn competitive commission on all successful referrals.' },
-            { icon: <TrendingUp size={28} color="var(--crimson)" />, title: 'High Conversion', desc: 'TFM is Muscat\'s most popular and trusted meat delivery platform.' },
+            { icon: <TrendingUp size={28} color="var(--crimson)" />, title: 'High Conversion', desc: 'TFM is Tarneit\'s most popular and trusted meat delivery platform.' },
             { icon: <DollarSign size={28} color="var(--crimson)" />, title: 'Monthly Payouts', desc: 'Receive earnings directly to your bank account with low minimum payout.' },
             { icon: <Handshake size={28} color="var(--crimson)" />, title: 'Marketing support', desc: 'Get banners, promo codes, and special affiliate-only offers.' },
           ].map((b, i) => (
@@ -30,7 +30,7 @@ export default function AffiliatePage() {
             <h2 style={{ fontSize: 18, fontWeight: 800, marginBottom: 16 }}>Who is this program for?</h2>
             <ul style={{ paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 12, fontSize: 14, color: '#5E554C', lineHeight: 1.5 }}>
               <li><strong>Food Bloggers & Chefs</strong>: Share TFM quality meat recipes and earn commissions when followers buy ingredients.</li>
-              <li><strong>Lifestyle Influencers</strong>: Promote healthy eating, organic meats, and convenient shopping in Oman.</li>
+              <li><strong>Lifestyle Influencers</strong>: Promote healthy eating, organic meats, and convenient shopping in Melbourne.</li>
               <li><strong>Deal & Coupon Sites</strong>: Share verified discounts and promotional codes.</li>
               <li><strong>Everyday Advocates</strong>: Anyone who loves our steaks and wants to earn pocket money sharing with neighbors.</li>
             </ul>

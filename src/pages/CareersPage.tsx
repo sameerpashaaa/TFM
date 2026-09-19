@@ -1,8 +1,8 @@
 export default function CareersPage() {
   const jobs = [
-    { title: 'Master Butcher', type: 'Full-time', location: 'Muscat, Oman', dept: 'Butchery Operations', desc: 'Seeking an experienced master butcher to handle premium portioning, dry-age management, and specialty cuts preparation.' },
-    { title: 'Quality Assurance Officer', type: 'Full-time', location: 'Ghala, Muscat', dept: 'Quality Control', desc: 'Responsible for monitoring cold chain integrity, checking raw materials, and ensuring compliance with halal & health standards.' },
-    { title: 'Customer Experience Executive', type: 'Full-time', location: 'Muscat, Oman', dept: 'Customer Support', desc: 'Manage incoming queries, order issues, delivery coordinates, and customer satisfaction ratings via chat, call and WhatsApp.' },
+    { title: 'Master Butcher', type: 'Full-time', location: 'Melbourne, Australia', dept: 'Butchery Operations', desc: 'Seeking an experienced master butcher to handle premium portioning, dry-age management, and specialty cuts preparation.' },
+    { title: 'Quality Assurance Officer', type: 'Full-time', location: 'Tarneit, Melbourne', dept: 'Quality Control', desc: 'Responsible for monitoring cold chain integrity, checking raw materials, and ensuring compliance with halal & health standards.' },
+    { title: 'Customer Experience Executive', type: 'Full-time', location: 'Melbourne, Australia', dept: 'Customer Support', desc: 'Manage incoming queries, order issues, delivery coordinates, and customer satisfaction ratings via chat, call and WhatsApp.' },
   ];
 
   return (

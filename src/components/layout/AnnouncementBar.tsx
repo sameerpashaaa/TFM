@@ -1,8 +1,8 @@
 const announcements = [
   '★ FREE delivery + FREE 2x AUS Grass-Fed Burgers with every whole carcass – Shop now',
   '★ 100% free returns & replacements because you deserve only the best!',
-  '★ Fresh AUS Angus and AUS Wagyu beef delivered within 1 hour across Muscat.',
-  '★ Delivered fresh within 1 hour across Muscat all days of the week.',
+  '★ Fresh AUS Angus and AUS Wagyu beef delivered within 1 hour across Melbourne.',
+  '★ Delivered fresh within 1 hour across Melbourne all days of the week.',
 ];
 
 export default function AnnouncementBar() {

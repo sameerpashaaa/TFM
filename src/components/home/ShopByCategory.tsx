@@ -16,7 +16,7 @@ const cats = [
   {
     slug: 'all-lamb',
     name: 'All Lamb',
-    sub: 'NZ · AUS · Omani',
+    sub: 'NZ · AUS · Local',
     // Lamb chops / rack of lamb
     img: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     cta: 'Shop Lamb →',
@@ -154,11 +154,21 @@ function CategoryCard({ cat, index }: { cat: typeof cats[0]; index: number }) {
             </div>
 
             <div style={{
-              color: 'var(--text-muted)',
-              fontSize: 12,
-              fontWeight: 600,
+              position: 'absolute',
+              top: 16,
+              right: 16,
+              background: 'rgba(255, 255, 255, 0.95)',
+              padding: '6px 12px',
+              borderRadius: 'var(--r-pill)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 6,
+              boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
             }}>
-              From OMR {cat.priceFrom}/kg
+              <Tag size={12} color="var(--crimson)" />
+              <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-primary)' }}>
+                From ${cat.priceFrom}/kg
+              </span>
             </div>
 
             <div style={{
@@ -198,7 +208,7 @@ export default function ShopByCategory() {
             Shop by Category
           </h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: 16, marginTop: 8, maxWidth: 480, margin: '8px auto 0' }}>
-            Every cut, every origin — delivered fresh within hours across Muscat.
+            Every cut, every origin — delivered fresh within hours across Melbourne.
           </p>
         </motion.div>
 

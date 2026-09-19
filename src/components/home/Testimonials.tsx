@@ -2,10 +2,10 @@ import { useRef } from 'react';
 
 const testimonials = [
   { name: 'Sabri Al Suleimani', rating: 5, text: 'The quality of TFM beef is absolutely outstanding. I ordered the Australian Wagyu and it was restaurant-level perfection. Delivered in under an hour!', order: 'Wagyu Ribeye Box' },
-  { name: 'Qusai Al-Hinai', rating: 5, text: 'Finally a butcher in Muscat that delivers on their promise. The lamb was incredibly tender and the packaging was excellent. Will definitely order again.', order: 'Premium Lamb Chops' },
-  { name: 'Abdulsalam Al-Rashdi', rating: 5, text: 'Best meat delivery service in Oman. The free returns policy gives me so much confidence. The NZ grass-fed lamb cubes are our family favourite.', order: 'NZ Grass-Fed Lamb' },
-  { name: 'Customer', rating: 4, text: 'Excellent service and amazing meat quality. The seasoned beef mince is perfect for our weekly BBQs. Fast delivery every single time.', order: 'Seasoned Beef Mince' },
-  { name: 'Mohammed Al-Balushi', rating: 5, text: 'I\'ve been ordering from TFM for 6 months and the quality is consistently brilliant. The dry-aged beef is worth every Rial.', order: 'Dry-Aged Tomahawk' },
+  { name: 'Qusai Al-Hinai', rating: 5, text: 'Finally a butcher in Melbourne that delivers on their promise. The lamb was incredibly tender and the packaging was excellent. Will definitely order again.', order: 'Premium Lamb Chops' },
+  { name: 'Abdulsalam Al-Rashdi', rating: 5, text: 'Best meat delivery service in Australia. The free returns policy gives me so much confidence. The NZ grass-fed lamb cubes are our family favourite.', order: 'NZ Grass-Fed Lamb' },
+  { name: 'Fatima Al-Lawati', rating: 5, text: 'Their customer service is unmatched. Had an issue with my order and they replaced it within 45 minutes, no questions asked.', order: 'Whole Chicken Box' },
+  { name: 'Mohammed Al-Balushi', rating: 5, text: 'I\'ve been ordering from TFM for 6 months and the quality is consistently brilliant. The dry-aged beef is worth every dollar.', order: 'Dry-Aged Tomahawk' },
   { name: 'Fatima Al-Lawati', rating: 5, text: 'The box collections offer incredible value. Got the lamb box and it lasted us a full week. All cuts were fresh and perfectly butchered.', order: 'Value Lamb Box' },
 ];
 

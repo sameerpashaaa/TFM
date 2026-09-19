@@ -47,7 +47,7 @@ export default function BlogPostPage() {
             {post.excerpt}
           </p>
           <p style={{ marginBottom: 20 }}>
-            When it comes to sourcing halal meat in the Sultanate of Oman, quality and trust are the primary parameters for every kitchen. At Tarneitfresh Meat (TFM), we believe that transparency is key. Our livestock are sourced directly from certified pastures in Australia and New Zealand, where strict animal welfare laws ensure healthy growth and natural development.
+            When it comes to sourcing halal meat in Australia, quality and trust are the primary parameters for every kitchen. At Tarneitfresh Meat (TFM), we believe that transparency is key. Our livestock are sourced directly from certified pastures in Australia and New Zealand, where strict animal welfare laws ensure healthy growth and natural development.
           </p>
           <h3 style={{ fontSize: 20, fontWeight: 800, color: '#1B1714', marginTop: 32, marginBottom: 12 }}>Uncompromised Cold Chain Operations</h3>
           <p style={{ marginBottom: 20 }}>

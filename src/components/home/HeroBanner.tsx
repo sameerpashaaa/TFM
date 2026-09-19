@@ -431,8 +431,8 @@ export default function HeroBanner() {
               textShadow: '0 1px 8px rgba(0,0,0,0.40)',
             }}
           >
-            Halal butchery, cut to order and driven straight to your door
-            across Muscat &mdash; never frozen, never sitting on a shelf.
+            We deliver the world's finest pasture-raised and grain-fed meats directly to your door
+            across Melbourne &mdash; never frozen, never sitting on a shelf.
           </p>
 
           <Link

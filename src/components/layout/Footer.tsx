@@ -44,12 +44,12 @@ export default function Footer() {
           <div style={{ fontWeight: 900, fontSize: 22, letterSpacing: 1, marginBottom: 4 }}>TARNEIT</div>
           <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 16, color: 'var(--accent-premium)' }}>Tarneitfresh Meat</div>
           <p style={{ color: 'rgba(255,255,255,.7)', fontSize: 13, lineHeight: 1.6, marginBottom: 16 }}>
-            SHS TOWER – SUITE 81, GHALA, MUSCAT, OMAN
+            TARNEIT VIC 3029, AUSTRALIA, MELBOURNE
           </p>
           <div style={{ fontSize: 13, color: 'rgba(255,255,255,.7)', lineHeight: 2, marginBottom: 16 }}>
             <div><span style={{ fontWeight: 600, color: '#fff' }}>Email:</span> <a href="mailto:contactus@tarneitfreshmeat.com" style={{ color: 'inherit', textDecoration: 'none' }}>contactus@tarneitfreshmeat.com</a></div>
-            <div><span style={{ fontWeight: 600, color: '#fff' }}>Whatsapp:</span> <a href="https://wa.me/96892423242" style={{ color: 'inherit', textDecoration: 'none' }}>+968 9242 3242</a></div>
-            <div><span style={{ fontWeight: 600, color: '#fff' }}>Telephone:</span> <a href="tel:24026400" style={{ color: 'inherit', textDecoration: 'none' }}>24026400</a></div>
+            <div><span style={{ fontWeight: 600, color: '#fff' }}>Whatsapp:</span> <a href="https://wa.me/61400000000" style={{ color: 'inherit', textDecoration: 'none' }}>+61 400 000 000</a></div>
+            <div><span style={{ fontWeight: 600, color: '#fff' }}>Telephone:</span> <a href="tel:+61400000000" style={{ color: 'inherit', textDecoration: 'none' }}>+61 400 000 000</a></div>
           </div>
           
           <div>
@@ -62,7 +62,7 @@ export default function Footer() {
             {[
               { icon: <FacebookIcon size={16} />, href: '#' },
               { icon: <InstagramIcon size={16} />, href: '#' },
-              { icon: <WhatsApp size={16} />, href: 'https://wa.me/96892423242' },
+              { icon: <WhatsApp size={16} />, href: 'https://wa.me/61400000000' },
               { icon: <LinkedinIcon size={16} />, href: '#' },
             ].map((s, i) => (
               <a key={i} href={s.href} style={{
@@ -103,7 +103,7 @@ export default function Footer() {
         <div>
           <h4 style={{ fontWeight: 700, marginBottom: 16, fontSize: 15, letterSpacing: .5 }}>Delivery Areas</h4>
           <p style={{ color: 'rgba(255,255,255,.7)', fontSize: 13, lineHeight: 1.6, marginBottom: 24 }}>
-            We currently deliver to major neighborhoods across Muscat, including: Al Mouj, Azaiba, Ghubra, Qurum, Madinat Al Sultan Qaboos, Seeb, and Al Khoud.
+            We currently deliver to major neighborhoods across Melbourne, including: Tarneit, Truganina, Hoppers Crossing, Werribee, Point Cook, and surrounding areas.
           </p>
           
           <h4 style={{ fontWeight: 700, marginBottom: 16, fontSize: 15, letterSpacing: .5 }}>Secure Payments</h4>

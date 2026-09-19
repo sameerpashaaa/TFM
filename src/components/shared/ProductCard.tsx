@@ -111,14 +111,14 @@ export default function ProductCard({ product, compact = false }: Props) {
         ) : (
           <div style={{ display: 'flex', alignItems: 'flex-end', gap: 6 }}>
             <span style={{ fontSize: 16, fontWeight: 800, color: 'var(--crimson)' }}>
-              OMR {product.price.toFixed(3)}
+              ${product.price.toFixed(3)}
             </span>
             <span style={{ fontSize: 12, color: 'var(--text-secondary)', fontWeight: 500, paddingBottom: 2 }}>
               /kg
             </span>
             {product.originalPrice && (
               <span style={{ fontSize: 12, color: 'var(--text-muted)', textDecoration: 'line-through', paddingBottom: 2, marginLeft: 4 }}>
-                OMR {product.originalPrice.toFixed(3)}
+                ${product.originalPrice.toFixed(3)}
               </span>
             )}
           </div>

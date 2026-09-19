@@ -95,7 +95,7 @@ export const navCategories: NavCategory[] = [
 
 export const origins = {
   beef: ['Australian Beef', 'Wagyu Beef', 'Angus Reserve'],
-  lamb: ['Australian Lamb', 'NZ Spring Lamb', 'Omani Local Lamb'],
+  lamb: ['Australian Lamb', 'NZ Spring Lamb', 'Victorian Lamb'],
   chicken: ['Local Fresh Chicken', 'Premium Free-Range', 'Corn-Fed Chicken'],
   fish: ['Fresh Local Catch', 'Norwegian Salmon', 'Indian Ocean Tuna'],
 };

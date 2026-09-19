@@ -4,7 +4,7 @@ const reviewsData = [
   { name: 'Sabri Al Suleimani', date: '30 Jul 2026', rating: 5, verified: true, title: 'Outstanding Quality', text: 'The quality of TFM beef is absolutely outstanding. I ordered the Australian Wagyu and it was restaurant-level perfection. Delivered in under an hour!' },
   { name: 'David Miller', date: '28 Jul 2026', rating: 5, verified: true, title: 'Excellent Service', text: 'Finally a butcher in Tarneit that delivers on their promise. The lamb rack was incredibly tender and the packaging was excellent. Will definitely order again.' },
   { name: 'Sarah Jenkins', date: '25 Jul 2026', rating: 5, verified: true, title: 'Highly Recommend', text: 'Best fresh meat delivery service in Melbourne. The free returns policy gives me so much confidence. The grass-fed Wagyu ribeye is our family favourite.' },
-  { name: 'Mohammed Al-Balushi', date: '20 Jul 2026', rating: 5, verified: true, title: 'Always Perfect', text: 'I\'ve been ordering from TFM for 6 months and the quality is consistently brilliant. The dry-aged beef is worth every Rial.' },
+  { name: 'Mohammed Al-Balushi', date: '20 Jul 2026', rating: 5, verified: true, title: 'Always Perfect', text: 'I\'ve been ordering from TFM for 6 months and the quality is consistently brilliant. The dry-aged beef is worth every dollar.' },
   { name: 'Fatima Al-Lawati', date: '18 Jul 2026', rating: 5, verified: true, title: 'Great Value Box', text: 'The box collections offer incredible value. Got the lamb box and it lasted us a full week. All cuts were fresh and perfectly butchered.' },
   { name: 'Salim Al-Harthy', date: '15 Jul 2026', rating: 4, verified: true, title: 'Great Ribeye Steaks', text: 'Super fast delivery and the Black Angus ribeyes were marble-rich and juicy. Excellent service overall.' }
 ];
@@ -15,7 +15,7 @@ export default function ReviewsPage() {
       <div className="container" style={{ maxWidth: 800 }}>
         <div className="section-label">CUSTOMER VOICE</div>
         <h1 style={{ textAlign: 'center', fontSize: 40, fontWeight: 600, letterSpacing: '-0.025em', marginBottom: 14 }}>Customer Reviews</h1>
-        <p style={{ textAlign: 'center', color: '#7C7268', marginBottom: 40 }}>Read verified reviews from our regular customers in Oman.</p>
+        <p style={{ textAlign: 'center', color: '#7C7268', marginBottom: 40 }}>Read verified reviews from our regular customers in Melbourne.</p>
 
         {/* Rating Summary */}
         <div style={{ background: '#fff', borderRadius: 20, padding: 32, border: '1px solid #E8DFD4', display: 'flex', gap: 40, alignItems: 'center', marginBottom: 32 }}>

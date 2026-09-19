@@ -1,14 +1,15 @@
 # Tarneit Fresh Meat (TFM) 🥩
 
-Premium Halal Meat E-Commerce Platform featuring high-performance scrollytelling frame animation, full collection filtering, interactive shopping cart, customer reviews, rewards, and local delivery in Muscat, Oman and Melbourne, Australia.
+Premium Halal Meat E-Commerce Platform featuring high-performance scrollytelling frame animation, full collection filtering, interactive shopping cart, customer reviews, rewards, and local delivery in Melbourne, Australia.
 
 ---
 
 ## 🚀 Features
 
-- **Frame-Driven Scrollytelling Hero**: 160-frame continuous scroll animation using hardware-accelerated Canvas rendering, persistent memory caching, and zero-stutter RAF loops.
-- **Product Catalog & Collections**: 120+ premium meat cuts across Beef, Lamb, Wagyu, Poultry, Value Boxes, and Seasoned items.
-- **Dynamic Origin & Cut Filtering**: Filter by origin (Australia, New Zealand, Japan, Oman, South Africa) and cut types with real-time price slider.
+- **High-Performance Animations**: Scrollytelling hero banner powered by `framer-motion` and `react-intersection-observer`.
+- **Global Design Tokens**: Clean, scalable vanilla CSS architecture without external bloat.
+- **Product Collections**: Categorized browsing with grid layouts and CSS variable-driven themes.
+- **Dynamic Origin & Cut Filtering**: Filter by origin (Australia, New Zealand, Japan, South Africa) and cut types with real-time price slider.
 - **Interactive Cart & Checkout**: Slide-over cart drawer with real-time quantity adjustments, free delivery threshold calculation, and persistent storage.
 - **Content & Customer Hub**: Dedicated pages for Customer Reviews, Loyalty Rewards, Referral Program, Affiliate System, Store Locations, FAQs, Contact Form, and Culinary Blogs.
 - **Responsive & Accessible Design**: Mobile-first architecture with custom SVG illustrations and high-contrast typography.
