@@ -174,15 +174,23 @@ export default function ProductPage() {
 
             {/* Price */}
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, marginBottom: 6 }}>
-              <span style={{ fontSize: 28, fontWeight: 900, color: 'var(--crimson)' }}>OMR {(variant?.price || product.price).toFixed(3)}</span>
-              {product.originalPrice && (
-                <span style={{ fontSize: 16, color: '#8A8074', textDecoration: 'line-through' }}>OMR {product.originalPrice.toFixed(3)}</span>
+              {product.enquireOnly ? (
+                <span style={{ fontSize: 20, fontWeight: 800, color: 'var(--crimson)', background: '#FBF0E9', padding: '6px 16px', borderRadius: 20, border: '1px solid #F2D5C4' }}>
+                  Price on Enquiry
+                </span>
+              ) : (
+                <>
+                  <span style={{ fontSize: 28, fontWeight: 900, color: 'var(--crimson)' }}>$ {(variant?.price || product.price).toFixed(2)}</span>
+                  {product.originalPrice && (
+                    <span style={{ fontSize: 16, color: '#8A8074', textDecoration: 'line-through' }}>$ {product.originalPrice.toFixed(2)}</span>
+                  )}
+                </>
               )}
               {product.inStock && (
                 <span style={{ background: '#d1fae5', color: '#065f46', fontSize: 12, fontWeight: 700, padding: '3px 10px', borderRadius: 20 }}>IN STOCK</span>
               )}
             </div>
-            {product.weight && <p style={{ fontSize: 13, color: '#7C7268', marginBottom: 16 }}>Price per kg: OMR {product.weight}</p>}
+            {product.weight && !product.enquireOnly && <p style={{ fontSize: 13, color: '#7C7268', marginBottom: 16 }}>Price per kg: $ {product.weight}</p>}
 
             {/* Variants (Weight) */}
             {product.variants && product.variants.length > 1 && (
@@ -245,32 +253,56 @@ export default function ProductPage() {
               />
             </div>
 
-            {/* Quantity + Add to Cart */}
+            {/* Quantity + Add to Cart / Enquire */}
             <div style={{ display: 'flex', gap: 12, marginBottom: 20 }}>
-              <div style={{ display: 'flex', alignItems: 'center', border: '1.5px solid #DCD1C4', borderRadius: 8, overflow: 'hidden' }}>
-                <button onClick={() => setQuantity(q => Math.max(1, q - 1))}
-                  style={{ width: 40, height: 48, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'none', border: 'none', cursor: 'pointer', color: '#4A423B' }}>
-                  <Minus size={14} />
-                </button>
-                <span style={{ width: 48, textAlign: 'center', fontWeight: 700, fontSize: 15 }}>{quantity}</span>
-                <button onClick={() => setQuantity(q => q + 1)}
-                  style={{ width: 40, height: 48, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'none', border: 'none', cursor: 'pointer', color: '#4A423B' }}>
-                  <Plus size={14} />
-                </button>
-              </div>
-              <button className="btn-red" style={{ flex: 1, padding: '14px 20px', fontSize: 14, letterSpacing: .5 }}>
-                ADD TO CART
-              </button>
+              {product.enquireOnly ? (
+                <>
+                  <a
+                    href="tel:0403153872"
+                    className="btn-red"
+                    style={{ flex: 1, padding: '14px 20px', fontSize: 15, letterSpacing: .5, textDecoration: 'none', textAlign: 'center', fontWeight: 700 }}
+                  >
+                    📞 CALL TO ENQUIRE
+                  </a>
+                  <a
+                    href="mailto:momin.shahad79@gmail.com"
+                    style={{
+                      padding: '14px 20px', border: '1.5px solid var(--crimson)', borderRadius: 8,
+                      color: 'var(--crimson)', fontWeight: 700, fontSize: 14, textDecoration: 'none',
+                      display: 'flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap'
+                    }}
+                  >
+                    ✉ Email Us
+                  </a>
+                </>
+              ) : (
+                <>
+                  <div style={{ display: 'flex', alignItems: 'center', border: '1.5px solid #DCD1C4', borderRadius: 8, overflow: 'hidden' }}>
+                    <button onClick={() => setQuantity(q => Math.max(1, q - 1))}
+                      style={{ width: 40, height: 48, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'none', border: 'none', cursor: 'pointer', color: '#4A423B' }}>
+                      <Minus size={14} />
+                    </button>
+                    <span style={{ width: 48, textAlign: 'center', fontWeight: 700, fontSize: 15 }}>{quantity}</span>
+                    <button onClick={() => setQuantity(q => q + 1)}
+                      style={{ width: 40, height: 48, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'none', border: 'none', cursor: 'pointer', color: '#4A423B' }}>
+                      <Plus size={14} />
+                    </button>
+                  </div>
+                  <button className="btn-red" style={{ flex: 1, padding: '14px 20px', fontSize: 14, letterSpacing: .5 }}>
+                    ADD TO CART
+                  </button>
+                </>
+              )}
             </div>
 
             {/* Pickup info */}
             <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: 8, padding: '12px 16px', marginBottom: 20, fontSize: 13 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
                 <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e' }}/>
-                <strong>Pickup available at TFM Gourmet Al Amarat</strong>
+                <strong>Pickup available at Tarneit Fresh Meats</strong>
               </div>
-              <p style={{ color: '#16a34a', paddingLeft: 14 }}>Usually ready in 2 hours</p>
-              <a href="#" style={{ color: 'var(--crimson)', fontSize: 12, fontWeight: 600, paddingLeft: 14, display: 'block', marginTop: 4 }}>Check availability at other stores →</a>
+              <p style={{ color: '#16a34a', paddingLeft: 14 }}>Shop 6, 747 Tarneit Rd, Tarneit VIC 3020</p>
+              <a href="tel:0403153872" style={{ color: 'var(--crimson)', fontSize: 12, fontWeight: 600, paddingLeft: 14, display: 'block', marginTop: 4 }}>Call 0403 153 872 to confirm availability →</a>
             </div>
 
             {/* Trust badges */}
@@ -293,7 +325,7 @@ export default function ProductPage() {
               <p>Not satisfied? We offer 100% free returns and replacements on all orders. Just contact us within 24 hours of delivery.</p>
             </AccordionItem>
             <AccordionItem title="📞 Need Help? Contact Us">
-              <p>WhatsApp: 92423242 | Email: contactus@tarneitfreshmeat.com | Telephone: 24026400</p>
+              <p>Call: 0403 153 872 | Email: momin.shahad79@gmail.com | Shop 6, 747 Tarneit Rd, Tarneit VIC 3020</p>
             </AccordionItem>
           </div>
         </div>
