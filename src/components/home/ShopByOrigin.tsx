@@ -12,18 +12,18 @@ const tabs: { label: string; key: OriginTab }[] = [
 
 // Each origin gets a flag emoji + a relevant background image
 const originData: Record<string, { flag: string; img: string; country: string }> = {
-  'Australian Beef':      { flag: '🇦🇺', country: 'Australia',   img: 'https://images.unsplash.com/photo-1546833998-877b37c2e5c6?auto=format&fit=crop&w=400&q=80' },
-  'Wagyu Beef':           { flag: '🇯🇵', country: 'Japan',        img: 'https://images.unsplash.com/photo-1588347818036-c3fb38dd9b7c?auto=format&fit=crop&w=400&q=80' },
-  'Angus Reserve':        { flag: '🇦🇺', country: 'Australia',   img: 'https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=400&q=80' },
-  'Australian Lamb':      { flag: '🇦🇺', country: 'Australia',   img: 'https://images.unsplash.com/photo-1615937691194-97dbd3f3dc29?auto=format&fit=crop&w=400&q=80' },
-  'NZ Spring Lamb':       { flag: '🇳🇿', country: 'New Zealand', img: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=400&q=80' },
-  'Victorian Lamb':       { flag: '🇦🇺', country: 'Australia',   img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80' },
-  'Local Fresh Chicken':  { flag: '🇦🇺', country: 'Australia',   img: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=400&q=80' },
-  'Premium Free-Range':   { flag: '🇦🇺', country: 'Australia',   img: 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=400&q=80' },
-  'Corn-Fed Chicken':     { flag: '🇺🇸', country: 'USA',         img: 'https://images.unsplash.com/photo-1501200291289-c5a76c232e5f?auto=format&fit=crop&w=400&q=80' },
-  'Fresh Local Catch':    { flag: '🇦🇺', country: 'Australia',   img: 'https://images.unsplash.com/photo-1510130387422-82bed34b37e9?auto=format&fit=crop&w=400&q=80' },
-  'Norwegian Salmon':     { flag: '🇳🇴', country: 'Norway',      img: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=400&q=80' },
-  'Indian Ocean Tuna':    { flag: '🌊',   country: 'Indian Ocean', img: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=80' },
+  'Australian Beef':      { flag: '🇦🇺', country: 'Australia',    img: '/images/aus-grass-fed-beef.jpg' },
+  'Wagyu Beef':           { flag: '🇯🇵', country: 'Japan',         img: '/images/aus-wagyu.jpg' },
+  'Angus Reserve':        { flag: '🇦🇺', country: 'Australia',    img: '/images/aus-black-angus.jpg' },
+  'Australian Lamb':      { flag: '🇦🇺', country: 'Australia',    img: '/images/aus-grass-lamb.jpg' },
+  'NZ Spring Lamb':       { flag: '🇳🇿', country: 'New Zealand',  img: '/images/nz-grass-lamb.jpg' },
+  'Victorian Lamb':       { flag: '🇦🇺', country: 'Australia',    img: '/images/aus-slaughtered-lamb.jpg' },
+  'Local Fresh Chicken':  { flag: '🇦🇺', country: 'Australia',    img: '/images/whole-chicken.jpg' },
+  'Premium Free-Range':   { flag: '🇦🇺', country: 'Australia',    img: '/images/chicken-breast.jpg' },
+  'Corn-Fed Chicken':     { flag: '🇺🇸', country: 'USA',          img: '/images/chicken-maryland-skin-on.jpg' },
+  'Fresh Local Catch':    { flag: '🇦🇺', country: 'Australia',    img: '/images/fish-barramundi.jpg' },
+  'Norwegian Salmon':     { flag: '🇳🇴', country: 'Norway',       img: '/images/fish-rohu.jpg' },
+  'Indian Ocean Tuna':    { flag: '🌊',   country: 'Indian Ocean', img: '/images/fish-tilapia.jpg' },
 };
 
 export default function ShopByOrigin() {

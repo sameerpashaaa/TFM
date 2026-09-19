@@ -10,7 +10,7 @@ interface OffersBundleProps {
 }
 
 export default function OffersBundle({
-  image = 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80',
+  image = '/images/hero-value-boxes.jpg',
   eyebrow = 'LIMITED TIME',
   headline = 'Weekend BBQ Bundle — Save 15%',
   subtext = 'Get everything you need for the perfect weekend grill. Includes Wagyu burgers, marinated mishkak, and premium lamb chops.',

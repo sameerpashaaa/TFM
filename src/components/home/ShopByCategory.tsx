@@ -1,80 +1,72 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Tag } from 'lucide-react';
 
 const cats = [
   {
-    slug: 'all-beef',
+    slug: 'beef',
     name: 'All Beef',
     sub: 'Wagyu · Angus · Grass-Fed',
-    // Raw beef steaks on dark background
-    img: 'https://images.unsplash.com/photo-1546833998-877b37c2e5c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-    cta: 'Shop Beef →',
-    priceFrom: '3.500',
+    img: '/images/cat-beef.jpg',
+    cta: 'Shop Beef',
+    priceFrom: '35.00',
   },
   {
-    slug: 'all-lamb',
+    slug: 'lamb',
     name: 'All Lamb',
     sub: 'NZ · AUS · Local',
-    // Lamb chops / rack of lamb
-    img: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-    cta: 'Shop Lamb →',
-    priceFrom: '4.200',
+    img: '/images/cat-lamb.jpg',
+    cta: 'Shop Lamb',
+    priceFrom: '24.50',
   },
   {
-    slug: 'mls-poultry',
+    slug: 'chicken',
     name: 'TFM Poultry',
-    sub: 'Chicken · Camel',
-    // Fresh whole chicken
-    img: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-    cta: 'Explore →',
-    priceFrom: '1.800',
+    sub: 'Chicken · Free-Range',
+    img: '/images/cat-poultry.jpg',
+    cta: 'Shop Poultry',
+    priceFrom: '14.00',
   },
   {
-    slug: 'whole-carcass',
+    slug: 'goat',
     name: 'Whole Carcass',
-    sub: 'Lamb · Beef · Camel',
-    // Butcher shop / hanging meat
-    img: 'https://images.unsplash.com/photo-1448907503123-67254d59ca4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-    cta: 'View Collection →',
-    priceFrom: '45.000',
+    sub: 'Lamb · Beef · Goat',
+    img: '/images/cat-carcass.jpg',
+    cta: 'View Collection',
+    priceFrom: '190.00',
   },
   {
-    slug: 'box-collection',
+    slug: 'eggs',
     name: 'Box Collection',
     sub: 'Value · Party · Family',
-    // BBQ platter / meat spread
-    img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-    cta: 'Shop Boxes →',
-    priceFrom: '12.000',
+    img: '/images/cat-box.jpg',
+    cta: 'Shop Boxes',
+    priceFrom: '65.00',
   },
   {
-    slug: 'seasoned',
-    name: 'Seasoned',
-    sub: 'Mishkak · Kofta · Rubs',
-    // Marinated grilled meat / skewers
-    img: 'https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-    cta: 'Explore →',
-    priceFrom: '2.500',
+    slug: 'marinated-chicken',
+    name: 'Seasoned & Marinated',
+    sub: 'Chicken · Lamb · Fish',
+    img: '/images/cat-seasoned.jpg',
+    cta: 'Explore Range',
+    priceFrom: '18.00',
   },
   {
-    slug: 'dry-aged-beef',
+    slug: 'beef',
     name: 'Dry Aged Beef',
     sub: 'Tomahawk · Ribeye',
-    // Premium thick-cut steaks
-    img: 'https://images.unsplash.com/photo-1588347818036-c3fb38dd9b7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-    cta: 'Shop Premium →',
-    priceFrom: '8.500',
+    img: '/images/cat-drybeef.jpg',
+    cta: 'Shop Premium',
+    priceFrom: '85.00',
   },
   {
-    slug: 'dry-aged-lamb',
+    slug: 'lamb',
     name: 'Dry Aged Lamb',
     sub: 'Rack · Chops · Shoulder',
-    // Lamb rack / chops up close
-    img: 'https://images.unsplash.com/photo-1615937691194-97dbd3f3dc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-    cta: 'View Collection →',
-    priceFrom: '9.000',
+    img: '/images/cat-drylamb.jpg',
+    cta: 'View Collection',
+    priceFrom: '45.00',
   },
 ];
 
@@ -115,7 +107,7 @@ function CategoryCard({ cat, index }: { cat: typeof cats[0]; index: number }) {
               transition={{ duration: 0.4 }}
             />
             
-            {/* Top badge */}
+            {/* Category type badge - top left */}
             <div style={{
               position: 'absolute', top: 12, left: 12,
               background: 'var(--bg)',
@@ -128,7 +120,24 @@ function CategoryCard({ cat, index }: { cat: typeof cats[0]; index: number }) {
               letterSpacing: 0.5,
               textTransform: 'uppercase',
             }}>
-              {cat.slug.includes('dry') ? '🥩 Artisan' : cat.slug.includes('box') ? '📦 Value' : cat.slug.includes('seasoned') ? '🌿 Marinated' : '⭐ Premium'}
+              {cat.name.includes('Dry') ? '🥩 Artisan' : cat.name.includes('Box') ? '📦 Value' : cat.name.includes('Seasoned') || cat.name.includes('Marinated') ? '🌿 Marinated' : '⭐ Premium'}
+            </div>
+
+            {/* Price badge - top right */}
+            <div style={{
+              position: 'absolute', top: 12, right: 12,
+              background: 'rgba(255,255,255,0.95)',
+              padding: '4px 10px',
+              borderRadius: 'var(--r-pill)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 5,
+              boxShadow: '0 2px 8px rgba(0,0,0,0.12)'
+            }}>
+              <Tag size={11} color="var(--crimson)" />
+              <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--text-primary)' }}>
+                From ${cat.priceFrom}/kg
+              </span>
             </div>
           </div>
 
@@ -151,24 +160,6 @@ function CategoryCard({ cat, index }: { cat: typeof cats[0]; index: number }) {
               }}>
                 {cat.sub}
               </div>
-            </div>
-
-            <div style={{
-              position: 'absolute',
-              top: 16,
-              right: 16,
-              background: 'rgba(255, 255, 255, 0.95)',
-              padding: '6px 12px',
-              borderRadius: 'var(--r-pill)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 6,
-              boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
-            }}>
-              <Tag size={12} color="var(--crimson)" />
-              <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-primary)' }}>
-                From ${cat.priceFrom}/kg
-              </span>
             </div>
 
             <div style={{
