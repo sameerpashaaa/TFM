@@ -48,32 +48,25 @@ export default function OffersBundle({
             }} />
           </div>
 
-          {/* Content */}
-          <div className="offers-content-box" style={{
-            position: 'relative',
-            zIndex: 1,
-            padding: '48px',
-            maxWidth: 600,
-            color: '#fff',
-            height: '100%'
-          }}>
-            <div style={{ 
+          {/* Content — responsive via .offers-content-box in index.css */}
+          <div className="offers-content-box">
+            <div style={{
               display: 'inline-block',
-              background: 'var(--accent-premium)', 
-              color: '#fff', 
-              fontSize: 12, 
-              fontWeight: 700, 
-              letterSpacing: 1, 
-              padding: '6px 12px', 
+              background: 'var(--accent-premium)',
+              color: '#fff',
+              fontSize: 12,
+              fontWeight: 700,
+              letterSpacing: 1,
+              padding: '6px 12px',
               borderRadius: 'var(--r-pill)',
               marginBottom: 20
             }}>
               {eyebrow}
             </div>
-            
+
             <h2 style={{
               fontFamily: 'var(--font-serif)',
-              fontSize: 'clamp(32px, 5vw, 48px)',
+              fontSize: 'clamp(26px, 5vw, 48px)',
               fontWeight: 600,
               lineHeight: 1.1,
               marginBottom: 16,
@@ -81,7 +74,7 @@ export default function OffersBundle({
             }}>
               {headline}
             </h2>
-            
+
             <p style={{
               fontSize: 16,
               lineHeight: 1.5,
@@ -91,26 +84,13 @@ export default function OffersBundle({
             }}>
               {subtext}
             </p>
-            
+
             <Link to={ctaLink} className="btn-red" style={{ padding: '14px 32px', fontSize: 14 }}>
               {ctaText}
             </Link>
           </div>
         </div>
       </div>
-      
-      <style>{`
-        @media (max-width: 768px) {
-          .offers-content-box {
-            background: linear-gradient(to top, rgba(27,23,20,1) 0%, rgba(27,23,20,0.8) 100%) !important;
-            padding: 32px 24px !important;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            min-height: 480px;
-          }
-        }
-      `}</style>
     </section>
   );
 }

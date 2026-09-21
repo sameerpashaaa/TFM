@@ -203,29 +203,13 @@ export default function ShopByCategory() {
           </p>
         </motion.div>
 
-        {/* Grid — 4 columns, 2 rows */}
-        <div className="shop-cat-grid" style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
-          gap: '24px',
-        }}>
+        {/* Grid — responsive via .shop-cat-grid class in index.css */}
+        <div className="shop-cat-grid">
           {cats.map((cat, i) => (
-            <CategoryCard key={cat.slug} cat={cat} index={i} />
+            <CategoryCard key={cat.slug + i} cat={cat} index={i} />
           ))}
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 1100px) {
-          .shop-cat-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 16px !important; }
-        }
-        @media (max-width: 768px) {
-          .shop-cat-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-        @media (max-width: 480px) {
-          .shop-cat-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }

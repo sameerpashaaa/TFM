@@ -34,17 +34,19 @@ export default function BlogSection() {
   return (
     <section style={{ padding: '64px 0' }}>
       <div className="container">
-        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 32 }}>
+        {/* Header row — responsive via .blog-header-row in index.css */}
+        <div className="blog-header-row">
           <div>
             <div className="section-label" style={{ color: 'var(--accent-deep)', textAlign: 'left' }}>FROM OUR KITCHEN</div>
             <h2 className="section-title" style={{ fontFamily: 'var(--font-serif)', margin: 0, textAlign: 'left' }}>Latest Articles</h2>
           </div>
-          <Link to="/blogs" style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--crimson)', fontWeight: 700, fontSize: 13, textDecoration: 'none' }}>
+          <Link to="/blogs" style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--crimson)', fontWeight: 700, fontSize: 13, textDecoration: 'none', flexShrink: 0 }}>
             View all articles <ArrowRight size={14} />
           </Link>
         </div>
 
-        <div ref={ref} className="blog-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
+        {/* Grid — responsive via .blog-grid in index.css */}
+        <div ref={ref} className="blog-grid">
           {blogs.map((b, i) => (
             <Link key={b.id} to={`/blogs/${b.slug}`} className="surface" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', overflow: 'hidden', padding: 0 }}>
               <div style={{ aspectRatio: '4/3', width: '100%', overflow: 'hidden', position: 'relative' }}>
@@ -68,15 +70,6 @@ export default function BlogSection() {
           ))}
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 900px) {
-          .blog-grid { grid-template-columns: repeat(2,1fr) !important; }
-        }
-        @media (max-width: 580px) {
-          .blog-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }

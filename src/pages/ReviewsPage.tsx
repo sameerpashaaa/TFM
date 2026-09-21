@@ -18,8 +18,8 @@ export default function ReviewsPage() {
         <p style={{ textAlign: 'center', color: '#7C7268', marginBottom: 40 }}>Read verified reviews from our regular customers in Melbourne.</p>
 
         {/* Rating Summary */}
-        <div style={{ background: '#fff', borderRadius: 20, padding: 32, border: '1px solid #E8DFD4', display: 'flex', gap: 40, alignItems: 'center', marginBottom: 32 }}>
-          <div style={{ textAlign: 'center', borderRight: '1px solid #E8DFD4', paddingRight: 40 }}>
+        <div className="reviews-rating-summary" style={{ background: '#fff', borderRadius: 20, padding: 32, border: '1px solid #E8DFD4', display: 'flex', gap: 40, alignItems: 'center', marginBottom: 32 }}>
+          <div className="reviews-rating-left" style={{ textAlign: 'center', borderRight: '1px solid #E8DFD4', paddingRight: 40, flexShrink: 0 }}>
             <div style={{ fontSize: 48, fontWeight: 900, color: 'var(--crimson)' }}>4.9</div>
             <div style={{ display: 'flex', gap: 2, justifyContent: 'center', margin: '8px 0' }}>
               {[...Array(5)].map((_, i) => <span key={i} style={{ color: '#f59e0b', fontSize: 20 }}>★</span>)}

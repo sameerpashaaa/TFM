@@ -116,10 +116,10 @@ export default function ProductPage() {
 
       {/* Main product section */}
       <div className="container" style={{ paddingTop: 32, paddingBottom: 48 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 40, alignItems: 'start' }}>
+        <div className="product-layout" style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 40, alignItems: 'start' }}>
 
           {/* Gallery */}
-          <div style={{ display: 'flex', gap: 12 }}>
+          <div className="product-gallery" style={{ display: 'flex', gap: 12, width: '100%' }}>
             {/* Thumbnails */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               {galleryImages.map((img, i) => (
@@ -130,7 +130,7 @@ export default function ProductPage() {
             </div>
 
             {/* Main image */}
-            <div style={{ width: 460, height: 480, borderRadius: 20, background: '#F7F2EB', border: '1px solid #E8DFD4', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div className="product-main-img" style={{ maxWidth: 460, width: '100%', height: 480, borderRadius: 20, background: '#F7F2EB', border: '1px solid #E8DFD4', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               {product.badge && (
                 <div style={{
                   position: 'absolute', top: 12, left: 12,
@@ -332,7 +332,8 @@ export default function ProductPage() {
 
         {/* Product Tabs */}
         <div style={{ marginTop: 48, borderTop: '1px solid #E8DFD4', paddingTop: 36 }}>
-          <div style={{ display: 'flex', gap: 0, borderBottom: '1px solid #E8DFD4', marginBottom: 24 }}>
+          {/* Horizontally scrollable on mobile via .product-tabs-row in index.css */}
+          <div className="product-tabs-row">
             {tabs.map((t, i) => (
               <button key={i} onClick={() => setActiveTab(i)}
                 style={{
@@ -375,8 +376,13 @@ export default function ProductPage() {
       </div>
 
       <style>{`
+        .product-layout { grid-template-columns: auto 1fr; }
         @media (max-width: 900px) {
           .product-layout { grid-template-columns: 1fr !important; }
+          .product-gallery { flex-direction: column-reverse !important; }
+          .product-gallery > div:first-child { flex-direction: row !important; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
+          .product-gallery > div:first-child::-webkit-scrollbar { display: none; }
+          .product-main-img { height: auto !important; aspect-ratio: 1; }
         }
       `}</style>
     </div>

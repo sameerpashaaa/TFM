@@ -39,7 +39,7 @@ export default function BestSellers() {
   return (
     <section style={{ padding: '64px 0' }}>
       <div className="container">
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24 }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 24, flexWrap: 'wrap', gap: 12 }}>
           <div>
             <div className="section-label" style={{ color: 'var(--accent-deep)', textAlign: 'left' }}>BEST SELLERS</div>
             <h2 className="section-title" style={{ margin: 0, textAlign: 'left' }}>Our Most Popular Cuts</h2>
@@ -83,7 +83,7 @@ export default function BestSellers() {
             className="scrollbar-none"
           >
             {items.map(p => (
-              <div key={p.id} style={{ scrollSnapAlign: 'start' }}>
+              <div key={p.id} className="carousel-card-wrap">
                 <ProductCard product={p} />
               </div>
             ))}

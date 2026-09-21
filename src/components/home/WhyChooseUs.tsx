@@ -31,11 +31,8 @@ export default function WhyChooseUs() {
           Why Choose Tarneit Fresh Meat
         </h2>
         
-        <div className="trust-grid" style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
-          gap: 32,
-        }}>
+        {/* Grid — responsive via .trust-grid in index.css */}
+        <div className="trust-grid">
           {reasons.map((r, i) => {
             const Icon = r.icon;
             return (
@@ -61,15 +58,6 @@ export default function WhyChooseUs() {
           })}
         </div>
       </div>
-      
-      <style>{`
-        @media (max-width: 900px) {
-          .trust-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 40px 24px !important; }
-        }
-        @media (max-width: 480px) {
-          .trust-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }

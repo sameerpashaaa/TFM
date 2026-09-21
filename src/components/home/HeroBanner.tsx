@@ -7,7 +7,8 @@ const FRAME_COUNT = 160;
 const FRAME_URL = (n: number) =>
   `/frames/ezgif-frame-${String(n).padStart(3, '0')}.jpg`;
 
-const TRACK_VH    = 280;   // Total scroll track height in vh
+// Hero track height is now controlled via .hero-track in index.css
+// (280vh on desktop → 120vh on mobile)
 const SMOOTH_MS   = 55;    // Easing time constant (ms)
 const MAX_CONCURRENT = 6;  // Parallel fetches
 const PREFETCH_AHEAD = 20; // Frames to prefetch forward
@@ -333,7 +334,7 @@ export default function HeroBanner() {
   return (
     <div
       ref={trackRef}
-      style={{ position: 'relative', height: `${TRACK_VH}vh` }}
+      className="hero-track"
     >
       <div
         style={{
@@ -381,14 +382,13 @@ export default function HeroBanner() {
 
         {/* Hero copy */}
         <div
-          className="container"
+          className="container hero-copy"
           style={{
             position: 'absolute',
             inset: 0,
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            padding: '0 24px',
             zIndex: 5,
           }}
         >
@@ -407,12 +407,12 @@ export default function HeroBanner() {
 
           <h1
             style={{
-              fontSize: 'clamp(32px, 5.2vw, 66px)',
+              fontSize: 'clamp(28px, 5.2vw, 66px)',
               fontWeight: 700,
               color: '#fff',
               lineHeight: 1.05,
               letterSpacing: '-0.04em',
-              marginBottom: 18,
+              marginBottom: 16,
               maxWidth: 620,
               textShadow: '0 2px 24px rgba(0,0,0,0.35)',
             }}
@@ -422,12 +422,13 @@ export default function HeroBanner() {
           </h1>
 
           <p
+            className="hero-subtext"
             style={{
               color: 'rgba(255,255,255,0.80)',
               fontSize: 15,
               lineHeight: 1.7,
               maxWidth: 440,
-              marginBottom: 32,
+              marginBottom: 28,
               textShadow: '0 1px 8px rgba(0,0,0,0.40)',
             }}
           >
@@ -438,7 +439,7 @@ export default function HeroBanner() {
           <Link
             to="/collections/all-beef"
             className="btn-red"
-            style={{ width: 'fit-content', padding: '16px 38px', fontSize: 12, letterSpacing: 1.4 }}
+            style={{ width: 'fit-content', padding: '14px 32px', fontSize: 12, letterSpacing: 1.4 }}
           >
             Shop now
           </Link>

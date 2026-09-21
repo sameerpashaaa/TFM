@@ -35,10 +35,8 @@ export default function Testimonials() {
 
         <div ref={ref} style={{ display: 'flex', gap: 24, overflowX: 'auto', paddingBottom: 16, scrollSnapType: 'x mandatory' }} className="scrollbar-none">
           {testimonials.map((t, i) => (
-            <div key={i} className="surface" style={{ 
+            <div key={i} className="surface testimonial-card-item" style={{ 
               padding: '32px', 
-              minWidth: 320, 
-              maxWidth: 360, 
               flexShrink: 0,
               scrollSnapAlign: 'start',
               display: 'flex', flexDirection: 'column'

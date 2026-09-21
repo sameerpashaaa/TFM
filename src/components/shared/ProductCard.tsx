@@ -64,7 +64,7 @@ export default function ProductCard({ product, compact = false }: Props) {
   };
 
   return (
-    <div className="product-card" style={{ minWidth: compact ? 200 : 280, maxWidth: 300, width: '100%' }}>
+    <div className="product-card" style={{ width: '100%' }}>
       {/* Image (4:3) */}
       <div className="product-card-img" style={{ aspectRatio: '4/3', height: 'auto', margin: 0, borderRadius: 'var(--r-card) var(--r-card) 0 0' }}>
         <img

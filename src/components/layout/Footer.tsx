@@ -37,7 +37,7 @@ function WhatsApp({ size = 18 }) {
 export default function Footer() {
   return (
     <footer style={{ background: 'var(--footer-bg)', color: '#fff', paddingTop: 48, paddingBottom: 0, borderTop: '4px solid var(--accent-premium)' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: 40, paddingBottom: 40 }}>
+      <div className="container footer-grid">
 
         {/* Brand & Contact */}
         <div>
@@ -51,7 +51,7 @@ export default function Footer() {
             <div><span style={{ fontWeight: 600, color: '#fff' }}>Whatsapp:</span> <a href="https://wa.me/61400000000" style={{ color: 'inherit', textDecoration: 'none' }}>+61 400 000 000</a></div>
             <div><span style={{ fontWeight: 600, color: '#fff' }}>Telephone:</span> <a href="tel:+61400000000" style={{ color: 'inherit', textDecoration: 'none' }}>+61 400 000 000</a></div>
           </div>
-          
+
           <div>
             <div style={{ fontWeight: 600, fontSize: 13, color: '#fff', marginBottom: 4 }}>Business Hours:</div>
             <div style={{ fontSize: 13, color: 'rgba(255,255,255,.7)' }}>Mon - Sun: 8:00 AM - 10:00 PM</div>
@@ -60,20 +60,31 @@ export default function Footer() {
           {/* Social */}
           <div style={{ display: 'flex', gap: 12, marginTop: 24 }}>
             {[
-              { icon: <FacebookIcon size={16} />, href: '#' },
-              { icon: <InstagramIcon size={16} />, href: '#' },
-              { icon: <WhatsApp size={16} />, href: 'https://wa.me/61400000000' },
-              { icon: <LinkedinIcon size={16} />, href: '#' },
+              { icon: <FacebookIcon size={16} />, href: '#', label: 'Facebook' },
+              { icon: <InstagramIcon size={16} />, href: '#', label: 'Instagram' },
+              { icon: <WhatsApp size={16} />, href: 'https://wa.me/61400000000', label: 'WhatsApp' },
+              { icon: <LinkedinIcon size={16} />, href: '#', label: 'LinkedIn' },
             ].map((s, i) => (
-              <a key={i} href={s.href} style={{
-                width: 34, height: 34, borderRadius: '50%',
-                border: '1px solid rgba(255,255,255,.2)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                color: 'rgba(255,255,255,.7)', transition: 'all .2s',
-              }}
+              <a
+                key={i}
+                href={s.href}
+                aria-label={s.label}
+                style={{
+                  width: 34,
+                  height: 34,
+                  borderRadius: '50%',
+                  border: '1px solid rgba(255,255,255,.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'rgba(255,255,255,.7)',
+                  transition: 'all .2s',
+                }}
                 onMouseEnter={e => { e.currentTarget.style.background = 'var(--crimson)'; e.currentTarget.style.borderColor = 'var(--crimson)'; e.currentTarget.style.color = '#fff'; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'rgba(255,255,255,.2)'; e.currentTarget.style.color = 'rgba(255,255,255,.7)'; }}
-              >{s.icon}</a>
+              >
+                {s.icon}
+              </a>
             ))}
           </div>
         </div>
@@ -90,9 +101,13 @@ export default function Footer() {
               { label: 'Terms of Service', to: '/terms' },
               { label: 'Privacy Policy', to: '/privacy' },
             ].map(l => (
-              <Link key={l.label} to={l.to} style={{ color: 'rgba(255,255,255,.7)', fontSize: 13, textDecoration: 'none', transition: 'color 0.2s' }} 
-                onMouseEnter={e => e.currentTarget.style.color = '#fff'}
-                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,.7)'}>
+              <Link
+                key={l.label}
+                to={l.to}
+                style={{ color: 'rgba(255,255,255,.7)', fontSize: 13, textDecoration: 'none', transition: 'color 0.2s' }}
+                onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,.7)')}
+              >
                 {l.label}
               </Link>
             ))}
@@ -105,7 +120,7 @@ export default function Footer() {
           <p style={{ color: 'rgba(255,255,255,.7)', fontSize: 13, lineHeight: 1.6, marginBottom: 24 }}>
             We currently deliver to major neighborhoods across Melbourne, including: Tarneit, Truganina, Hoppers Crossing, Werribee, Point Cook, and surrounding areas.
           </p>
-          
+
           <h4 style={{ fontWeight: 700, marginBottom: 16, fontSize: 15, letterSpacing: .5 }}>Secure Payments</h4>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             <div style={{ padding: '6px 10px', background: '#fff', borderRadius: 4, display: 'flex', alignItems: 'center' }}>
@@ -126,19 +141,42 @@ export default function Footer() {
           <p style={{ color: 'rgba(255,255,255,.6)', fontSize: 13, lineHeight: 1.6, marginBottom: 16 }}>
             Subscribe to our newsletter and get 7% off your first purchase!
           </p>
-          <form onSubmit={e => e.preventDefault()} style={{ display: 'flex', overflow: 'hidden', borderRadius: 6, border: '1px solid rgba(255,255,255,.15)' }}>
+          {/* flex-wrap: wrap so Subscribe button stacks below input on very narrow screens */}
+          <form
+            onSubmit={e => e.preventDefault()}
+            style={{ display: 'flex', flexWrap: 'wrap', gap: 0, borderRadius: 6, border: '1px solid rgba(255,255,255,.15)', overflow: 'hidden' }}
+          >
             <input
-              type="email" placeholder="Enter your email"
+              type="email"
+              placeholder="Enter your email"
               style={{
-                flex: 1, padding: '10px 14px', background: 'rgba(255,255,255,.08)',
-                border: 'none', color: '#fff', fontSize: 13, outline: 'none',
+                flex: '1 1 160px',
+                padding: '10px 14px',
+                background: 'rgba(255,255,255,.08)',
+                border: 'none',
+                color: '#fff',
+                fontSize: 13,
+                outline: 'none',
+                minWidth: 0,
               }}
             />
-            <button type="submit" style={{
-              padding: '10px 16px', background: 'var(--crimson)',
-              color: '#fff', fontWeight: 700, fontSize: 12, border: 'none', cursor: 'pointer',
-              letterSpacing: .5, whiteSpace: 'nowrap',
-            }}>SUBSCRIBE</button>
+            <button
+              type="submit"
+              style={{
+                flex: '0 0 auto',
+                padding: '10px 16px',
+                background: 'var(--crimson)',
+                color: '#fff',
+                fontWeight: 700,
+                fontSize: 12,
+                border: 'none',
+                cursor: 'pointer',
+                letterSpacing: .5,
+                whiteSpace: 'nowrap',
+              }}
+            >
+              SUBSCRIBE
+            </button>
           </form>
         </div>
       </div>
@@ -146,18 +184,9 @@ export default function Footer() {
       {/* Bottom bar */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,.08)', padding: '20px 0', textAlign: 'center' }}>
         <p style={{ color: 'rgba(255,255,255,.4)', fontSize: 12 }}>
-          © {new Date().getFullYear()} Tarneitfresh Meat Store. All rights reserved. | Powered by TFM
+          &copy; {new Date().getFullYear()} Tarneitfresh Meat Store. All rights reserved. | Powered by TFM
         </p>
       </div>
-
-      <style>{`
-        @media (max-width: 900px) {
-          footer .container { grid-template-columns: 1fr 1fr !important; }
-        }
-        @media (max-width: 580px) {
-          footer .container { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </footer>
   );
 }
