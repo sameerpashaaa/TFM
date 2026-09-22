@@ -6,15 +6,6 @@ import type { Product } from '../data/products';
 import { products } from '../data/products';
 import ProductCard from '../components/shared/ProductCard';
 
-function Stars({ rating }: { rating: number }) {
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-      {Array.from({ length: 5 }, (_, i) => (
-        <span key={i} style={{ color: i < Math.floor(rating) ? '#f59e0b' : '#DCD1C4', fontSize: 16 }}>★</span>
-      ))}
-    </div>
-  );
-}
 
 // SVG thumbnail placeholder
 function ThumbPlaceholder({ imgSrc, active }: { imgSrc: string; active: boolean }) {
@@ -165,18 +156,12 @@ export default function ProductPage() {
           <div style={{ maxWidth: 520 }}>
             <h1 style={{ fontSize: 'clamp(18px, 3vw, 26px)', fontWeight: 800, lineHeight: 1.3, marginBottom: 12 }}>{product.name}</h1>
 
-            {/* Rating */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
-              <Stars rating={product.rating} />
-              <span style={{ fontWeight: 700, fontSize: 14 }}>{product.rating}</span>
-              <span style={{ color: '#7C7268', fontSize: 13 }}>· {product.reviewCount} reviews</span>
-            </div>
 
             {/* Price */}
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, marginBottom: 6 }}>
               {product.enquireOnly ? (
-                <span style={{ fontSize: 20, fontWeight: 800, color: 'var(--crimson)', background: '#FBF0E9', padding: '6px 16px', borderRadius: 20, border: '1px solid #F2D5C4' }}>
-                  Price on Enquiry
+                <span style={{ fontSize: 15, fontWeight: 600, color: '#4A423B' }}>
+                  Price on enquiry — ask us on WhatsApp below
                 </span>
               ) : (
                 <>

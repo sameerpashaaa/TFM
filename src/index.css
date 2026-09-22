@@ -468,8 +468,23 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 }
 
 .navbar-info-row {
-  background: #FAF6F1;
-  border-top: 1px solid #F2EBE2;
+  background: #FDFDFD;
+  border-top: 1px solid #EAEAEA;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.navbar-info-link {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #666;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.navbar-info-link:hover {
+  color: var(--crimson);
+  text-decoration: underline;
 }
 
 /* ── Shop category grid ────────────────────────────────────────────────────── */
@@ -678,4 +693,41 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
     border-bottom: 1px solid var(--border);
     padding-bottom: 20px !important;
   }
+}
+
+/* ── Nav dropdown hover (replaces onMouseEnter inline style mutations) ──────── */
+.nav-dropdown-link {
+  transition: color 0.15s ease, background 0.15s ease, padding-left 0.15s ease;
+}
+.nav-dropdown-link:hover {
+  color: var(--crimson) !important;
+  background: #FBF0E9;
+  padding-left: 20px !important;
+}
+
+/* ── Header phone label — hide on medium screens to save space ─────────────── */
+@media (max-width: 1024px) {
+  .header-phone-label { display: none; }
+}
+
+/* ── Reduced motion — disable all CSS transitions and animations ────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track { animation: none !important; }
+}
+
+/* ── Contrast fixes (T1.11) ─────────────────────────────────────────────────── */
+/* Ensure muted text meets 4.5:1 on cream background (#F2EDE4) */
+:root {
+  --text-muted: #6b6156; /* was #8A8074 — now ≥4.5:1 on cream */
+}
+
+/* Minimum touch target sizes */
+button, [role="button"], a.btn-red {
+  min-height: 44px;
 }

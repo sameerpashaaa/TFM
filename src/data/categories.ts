@@ -97,7 +97,7 @@ export const origins = {
   beef: ['Australian Beef', 'Wagyu Beef', 'Angus Reserve'],
   lamb: ['Australian Lamb', 'NZ Spring Lamb', 'Victorian Lamb'],
   chicken: ['Local Fresh Chicken', 'Premium Free-Range', 'Corn-Fed Chicken'],
-  fish: ['Fresh Local Catch', 'Norwegian Salmon', 'Indian Ocean Tuna'],
+  fish: ['Fresh Local Catch', 'Indian Ocean Tuna'],
 };
 
 export const cuts = ['Fillets', 'Steak', 'Whole', 'Mince', 'Curry Pieces', 'Boneless', 'Leg', 'Shoulder', 'Drumsticks', 'Wings', 'Cutlets'];

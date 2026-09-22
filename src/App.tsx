@@ -19,16 +19,22 @@ import ContactPage from './pages/ContactPage';
 import LocationsPage from './pages/LocationsPage';
 import BlogsPage from './pages/BlogsPage';
 import BlogPostPage from './pages/BlogPostPage';
+import DeliveryPage from './pages/DeliveryPage';
+import ReturnsPage from './pages/ReturnsPage';
+import TermsPage from './pages/TermsPage';
+import PrivacyPage from './pages/PrivacyPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
   return (
     <CartProvider>
       <Router>
+        {/* padding-bottom for mobile sticky bar (80px safe area) */}
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <AnnouncementBar />
           <Header />
           <Navbar />
-          <main style={{ flex: 1 }}>
+          <main style={{ flex: 1, paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/collections/:slug" element={<CollectionPage />} />
@@ -44,8 +50,13 @@ export default function App() {
               <Route path="/locations" element={<LocationsPage />} />
               <Route path="/blogs" element={<BlogsPage />} />
               <Route path="/blogs/:slug" element={<BlogPostPage />} />
-              {/* Fallback to home */}
-              <Route path="*" element={<HomePage />} />
+              {/* New pages required by footer links */}
+              <Route path="/delivery" element={<DeliveryPage />} />
+              <Route path="/returns" element={<ReturnsPage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              {/* Real 404 — previously redirected to HomePage (T1.3) */}
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>
           <Footer />
@@ -55,4 +66,3 @@ export default function App() {
     </CartProvider>
   );
 }
-

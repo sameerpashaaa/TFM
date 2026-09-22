@@ -8,7 +8,7 @@ interface FaqItem {
 }
 
 const faqs: FaqItem[] = [
-  { cat: 'Delivery', q: 'How fast do you deliver fresh meat in Tarneit & Melbourne?', a: 'We deliver within 1 hour across Tarneit, Werribee, and surrounding Melbourne suburbs. Delivery is active 7 days a week from 8:00 AM to 8:00 PM.' },
+  { cat: 'Delivery', q: 'How fast do you deliver fresh meat in Tarneit & Melbourne?', a: 'We deliver within about 60 minutes across Tarneit, Truganina, Hoppers Crossing, Werribee, Point Cook, and surrounding Melbourne suburbs. We deliver 7 days a week — WhatsApp or call us to confirm current hours.' },
   { cat: 'Delivery', q: 'What is the delivery fee?', a: 'Delivery is free on all orders above $100 AUD. For orders below $100 AUD, a flat delivery fee of $12 AUD is applied.' },
   { cat: 'Quality', q: 'Is TFM meat 100% Halal certified?', a: 'Yes. All our products are 100% Halal certified. We source directly from approved free-range farms in Australia and New Zealand under strict organic guidelines.' },
   { cat: 'Quality', q: 'How is the fresh meat packed?', a: 'We pack all meats in temperature-controlled thermal boxes with food-grade gel ice packs. This ensures the meat remains perfectly cold (between 0°C and 4°C) during transport.' },

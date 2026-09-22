@@ -1,4 +1,4 @@
-export interface Product {
+﻿export interface Product {
   id: string;
   slug: string;
   name: string;
@@ -32,102 +32,91 @@ export const products: Product[] = [
   // ── CHICKEN ────────────────────────────────────────────────────────────────
   {
     id: 'ch-1', slug: 'breast-fillets-skin-on',
-    name: 'BREAST FILLETS SKIN ON',
+    name: 'Breast Fillets Skin On',
     category: 'chicken', origin: 'Australia', cut: 'Fillets',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-breast-skin-on.jpg',
     description: 'Fresh Australian chicken breast fillets with skin on.',
-    badge: 'ENQUIRE',
   },
   {
-    id: 'ch-2', slug: 'breast-fillets-skinn-off',
-    name: 'BREAST FILLETS SKINN OFF',
+    id: 'ch-2', slug: 'breast-fillets-skin-off',
+    name: 'Breast Fillets Skin Off',
     category: 'chicken', origin: 'Australia', cut: 'Fillets',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-breast-skinless.jpg',
     description: 'Fresh Australian chicken breast fillets with skin removed.',
-    badge: 'ENQUIRE',
   },
   {
-    id: 'ch-3', slug: 'thigh-fillets-skinn-off',
-    name: 'THIGH FILLETS SKINN OFF',
+    id: 'ch-3', slug: 'thigh-fillets-skin-off',
+    name: 'Thigh Fillets Skin Off',
     category: 'chicken', origin: 'Australia', cut: 'Fillets',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-thigh-fillets.jpg',
     description: 'Fresh Australian chicken thigh fillets with skin removed.',
-    badge: 'ENQUIRE',
   },
   {
-    id: 'ch-4', slug: 'maryland-skinn-on',
-    name: 'MARYLAND SKINN ON',
+    id: 'ch-4', slug: 'maryland-skin-on',
+    name: 'Maryland Skin On',
     category: 'chicken', origin: 'Australia', cut: 'Maryland',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-maryland-skin-on.jpg',
     description: 'Fresh chicken Maryland (thigh + drumstick) with skin on.',
-    badge: 'ENQUIRE',
   },
   {
-    id: 'ch-5', slug: 'maryland-skinn-off',
-    name: 'MARYLAND SKINN OFF',
+    id: 'ch-5', slug: 'maryland-skin-off',
+    name: 'Maryland Skin Off',
     category: 'chicken', origin: 'Australia', cut: 'Maryland',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-maryland-skinless.jpg',
     description: 'Fresh chicken Maryland (thigh + drumstick) with skin removed.',
-    badge: 'ENQUIRE',
   },
   {
-    id: 'ch-6', slug: 'drumsticks-skinn-on',
-    name: 'DRUMSTICKS SKINN ON',
+    id: 'ch-6', slug: 'drumsticks-skin-on',
+    name: 'Drumsticks Skin On',
     category: 'chicken', origin: 'Australia', cut: 'Drumsticks',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-drumsticks-skin-on.jpg',
     description: 'Fresh chicken drumsticks with skin on.',
-    badge: 'ENQUIRE',
   },
   {
-    id: 'ch-7', slug: 'drumsticks-skinn-off',
-    name: 'DRUMSTICKS SKINN OFF',
+    id: 'ch-7', slug: 'drumsticks-skin-off',
+    name: 'Drumsticks Skin Off',
     category: 'chicken', origin: 'Australia', cut: 'Drumsticks',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-drumsticks-skinless.jpg',
     description: 'Fresh chicken drumsticks with skin removed.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ch-8', slug: 'wings',
-    name: 'WINGS',
+    name: 'Chicken Wings',
     category: 'chicken', origin: 'Australia', cut: 'Wings',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-wings.jpg',
     description: 'Fresh whole chicken wings.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ch-9', slug: 'wingetts',
-    name: 'WINGETTS',
+    name: 'Wingettes',
     category: 'chicken', origin: 'Australia', cut: 'Wings',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-wingettes.jpg',
     description: 'Fresh chicken wingettes.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ch-10', slug: 'drummets',
-    name: 'DRUMMETS',
+    name: 'Drumettes',
     category: 'chicken', origin: 'Australia', cut: 'Drumettes',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-drummets.jpg',
     description: 'Fresh chicken drumettes.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ch-11', slug: 'wingetts-and-drummets',
-    name: 'WINGETTS AND DRUMMETS',
+    name: 'Wingettes and Drumettes',
     category: 'chicken', origin: 'Australia', cut: 'Wings',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-wingettes-drummets.jpg',
     description: 'Fresh chicken wingettes and drumettes combined pack.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ch-12', slug: 'whole-chicken-size-9',
@@ -136,7 +125,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/whole-chicken-size-9.jpg',
     description: 'Fresh whole chicken – Size 9.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ch-13', slug: 'whole-chicken-size-10',
@@ -145,7 +133,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/whole-chicken-size-10.jpg',
     description: 'Fresh whole chicken – Size 10.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ch-14', slug: 'whole-chicken-size-11',
@@ -154,7 +141,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/whole-chicken-size-11.jpg',
     description: 'Fresh whole chicken – Size 11.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ch-15', slug: 'whole-chicken-size-12',
@@ -163,7 +149,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/whole-chicken-size-12.jpg',
     description: 'Fresh whole chicken – Size 12.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ch-16', slug: 'whole-chicken-size-14',
@@ -172,7 +157,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/whole-chicken-size-14.jpg',
     description: 'Fresh whole chicken – Size 14.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ch-17', slug: 'whole-chicken-size-16',
@@ -181,7 +165,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/whole-chicken-size-16.jpg',
     description: 'Fresh whole chicken – Size 16.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ch-18', slug: 'chicken-mishkak',
@@ -190,7 +173,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-mishkak.jpg',
     description: 'Fresh chicken mishkak skewers.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ch-19', slug: 'chicken-breast',
@@ -199,7 +181,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-breast.jpg',
     description: 'Fresh chicken breast.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ch-20', slug: 'chicken-drumsticks',
@@ -208,7 +189,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-drumsticks.jpg',
     description: 'Fresh chicken drumsticks.',
-    badge: 'ENQUIRE',
   },
 
   // ── GOAT ───────────────────────────────────────────────────────────────────
@@ -219,7 +199,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/goat-leg.jpg',
     description: 'Fresh whole goat leg.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'gt-2', slug: 'goat-shoulder',
@@ -228,7 +207,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/goat-shoulder.jpg',
     description: 'Fresh whole goat shoulder.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'gt-3', slug: 'goat-curry-pieces',
@@ -237,16 +215,14 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/goat-curry-pieces.jpg',
     description: 'Fresh goat cut into curry pieces.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'gt-4', slug: 'goat-mince',
-    name: 'GOAT MINCE',
+    name: 'Goat Mince',
     category: 'goat', origin: 'Australia', cut: 'Mince',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/goat-mince.jpg',
     description: 'Freshly ground goat mince.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'gt-5', slug: 'goat-boneless',
@@ -255,27 +231,24 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/goat-boneless.jpg',
     description: 'Fresh boneless goat meat.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'gt-6', slug: 'goat-mince-2',
-    name: 'GOAT MINCE',
+    name: 'Goat Mince',
     category: 'goat', origin: 'Australia', cut: 'Mince',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/goat-mince.jpg',
     description: 'Freshly ground goat mince – premium grade.',
-    badge: 'ENQUIRE',
   },
 
   // ── LAMB ───────────────────────────────────────────────────────────────────
   {
     id: 'lm-1', slug: 'lamb-leg',
-    name: 'LAMB LEG',
+    name: 'Lamb Leg',
     category: 'lamb', origin: 'Australia', cut: 'Leg',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-leg.jpg',
     description: 'Fresh whole lamb leg.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-2', slug: 'lamb-shoulder',
@@ -284,7 +257,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-shoulder.jpg',
     description: 'Fresh whole lamb shoulder.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-3', slug: 'lamb-curry-pieces',
@@ -293,7 +265,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-bone-in-cubes.jpg',
     description: 'Fresh lamb cut into bone-in curry pieces.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-4', slug: 'lamb-bbq',
@@ -302,16 +273,14 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-mishkak.jpg',
     description: 'Fresh lamb cut for BBQ.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-5', slug: 'lamb-cutlets',
-    name: 'LAMB CUTLETS',
+    name: 'Lamb Cutlets',
     category: 'lamb', origin: 'Australia', cut: 'Cutlets',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-chops.jpg',
     description: 'Fresh lamb cutlets.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-6', slug: 'lamb-boneless-diced',
@@ -320,7 +289,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-boneless-cubes.jpg',
     description: 'Fresh boneless diced lamb.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-7', slug: 'lamb-backstrap',
@@ -329,7 +297,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-backstrap.jpg',
     description: 'Fresh lamb backstrap – premium cut.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-8', slug: 'lamb-fillets',
@@ -338,7 +305,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-fillets.jpg',
     description: 'Fresh tender lamb fillets.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-9', slug: 'lamb-marrow-bones',
@@ -347,7 +313,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-marrow-bones.jpg',
     description: 'Fresh lamb marrow bones.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-10', slug: 'lamb-soup-bones',
@@ -356,7 +321,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-soup-bones.jpg',
     description: 'Fresh lamb soup bones – ideal for stocks and broths.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-11', slug: 'lamb-neck-chops',
@@ -365,16 +329,14 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-neck-chops.jpg',
     description: 'Fresh lamb neck chops.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-12', slug: 'lamb-shanks',
-    name: 'LAMB SHANKS',
+    name: 'Lamb Shanks',
     category: 'lamb', origin: 'Australia', cut: 'Shanks',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-shanks.jpg',
     description: 'Fresh whole lamb shanks – slow cook to perfection.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-13', slug: 'lamb-premium-mince',
@@ -383,7 +345,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-mince.jpg',
     description: 'Premium freshly ground lamb mince.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-14', slug: 'lamb-aus-mishkak',
@@ -392,7 +353,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-aus-mishkak.jpg',
     description: 'Fresh Australian lamb mishkak skewers.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-15', slug: 'lamb-burgers',
@@ -401,7 +361,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-burgers.jpg',
     description: 'Freshly prepared lamb burgers.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-16', slug: 'lamb-carcass',
@@ -410,7 +369,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-carcass.jpg',
     description: 'Whole lamb carcass.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-17', slug: 'lamb-cubes',
@@ -419,7 +377,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-cubes.jpg',
     description: 'Fresh lamb cubes.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-18', slug: 'lamb-rack-whole',
@@ -428,7 +385,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-rack-whole.jpg',
     description: 'Fresh whole lamb rack.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-19', slug: 'lamb-ribs',
@@ -437,7 +393,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-ribs.jpg',
     description: 'Fresh lamb ribs.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'lm-20', slug: 'lamb-sausages',
@@ -446,7 +401,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/lamb-sausages.jpg',
     description: 'Fresh lamb sausages.',
-    badge: 'ENQUIRE',
   },
 
   // ── BEEF ───────────────────────────────────────────────────────────────────
@@ -457,7 +411,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-topside-steak.jpg',
     description: 'Fresh beef topside steak.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-2', slug: 'beef-topside-roast',
@@ -466,7 +419,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-roast.jpg',
     description: 'Fresh beef topside roast.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-3', slug: 'beef-schnitzels',
@@ -475,7 +427,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-thin-slices.jpg',
     description: 'Fresh thinly sliced beef schnitzels.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-4', slug: 'beef-curry',
@@ -484,16 +435,14 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-curry-pieces.jpg',
     description: 'Fresh beef cut into curry pieces.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-5', slug: 'beef-mince',
-    name: 'BEEF MINCE',
+    name: 'Beef Mince',
     category: 'beef', origin: 'Australia', cut: 'Mince',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-mince-1.jpg',
     description: 'Fresh lean beef mince.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-6', slug: 'beef-ropside-mince',
@@ -502,7 +451,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-ropside-mince.jpg',
     description: 'Fresh beef ropside mince.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-7', slug: 'beef-brisket',
@@ -511,7 +459,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-brisket.jpg',
     description: 'Fresh beef brisket.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-8', slug: 'beef-t-bone-steak',
@@ -520,7 +467,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-tbone-steak.jpg',
     description: 'Fresh beef T-Bone steak.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-9', slug: 'beef-poterhouse-steak',
@@ -529,7 +475,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-porterhouse-steak.jpg',
     description: 'Fresh beef Porterhouse steak.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-10', slug: 'beef-scotch-fillets',
@@ -538,7 +483,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/angus-ribeye.jpg',
     description: 'Fresh beef Scotch fillet (Ribeye).',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-11', slug: 'beef-stir-fry',
@@ -547,7 +491,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-stroganoff.jpg',
     description: 'Fresh beef sliced for stir fry.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-12', slug: 'beef-odka',
@@ -556,7 +499,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-odka.jpg',
     description: 'Fresh beef Odka cut.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-13', slug: 'beef-suqaar',
@@ -565,7 +507,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-suqaar.jpg',
     description: 'Fresh beef Suqaar – Somali-style finely diced beef.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-14', slug: 'beef-chuck-on-bone',
@@ -574,7 +515,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-chuck-on-bone.jpg',
     description: 'Fresh beef chuck on bone.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-15', slug: 'beef-marrow-bones',
@@ -583,7 +523,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-marrow-bones.jpg',
     description: 'Fresh beef marrow bones.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-16', slug: 'beef-soup-bones',
@@ -592,7 +531,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-soup-bones.jpg',
     description: 'Fresh beef soup bones – perfect for stocks and broths.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-17', slug: 'beef-bone-in-cubes',
@@ -601,7 +539,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-bone-in-cubes.jpg',
     description: 'Fresh beef bone-in cubes.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-18', slug: 'beef-boneless-cubes',
@@ -610,7 +547,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-boneless-cubes.jpg',
     description: 'Fresh beef boneless cubes.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-19', slug: 'beef-brisket-whole',
@@ -619,7 +555,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-brisket-whole.jpg',
     description: 'Fresh whole beef brisket.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-20', slug: 'beef-burger',
@@ -628,7 +563,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-burger.jpg',
     description: 'Freshly prepared beef burgers.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-21', slug: 'beef-meatballs',
@@ -637,7 +571,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-meatball.jpg',
     description: 'Fresh beef meatballs.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-22', slug: 'beef-mince-box',
@@ -646,7 +579,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-mince-box.jpg',
     description: 'Fresh beef mince – bulk box.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-23', slug: 'beef-mishkak',
@@ -655,7 +587,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-mishkak.jpg',
     description: 'Fresh beef mishkak skewers.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-24', slug: 'beef-ribs',
@@ -664,7 +595,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-ribs.jpg',
     description: 'Fresh beef ribs.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-25', slug: 'beef-sausages',
@@ -673,7 +603,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-sausages.jpg',
     description: 'Fresh beef sausages.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'bf-26', slug: 'beef-striploin',
@@ -682,7 +611,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/beef-striploin.jpg',
     description: 'Fresh beef striploin.',
-    badge: 'ENQUIRE',
   },
 
   // ── FISH ───────────────────────────────────────────────────────────────────
@@ -693,7 +621,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/fish-rohu.jpg',
     description: 'Fresh whole Rohu fish.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fs-2', slug: 'rohu-steak',
@@ -702,7 +629,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/fish-rohu-steak.jpg',
     description: 'Fresh Rohu fish steaks.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fs-3', slug: 'basa-steak',
@@ -711,7 +637,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/fish-basa.jpg',
     description: 'Fresh Basa fish steaks.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fs-4', slug: 'basa-whole',
@@ -720,7 +645,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/fish-basa-whole.jpg',
     description: 'Fresh whole Basa fish.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fs-5', slug: 'basa-fillets',
@@ -729,7 +653,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/fish-basa-fillets.jpg',
     description: 'Fresh Basa fish fillets.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fs-6', slug: 'barramundi-whole',
@@ -738,7 +661,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/fish-barramundi.jpg',
     description: 'Fresh whole Australian Barramundi.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fs-7', slug: 'barramundi-steak',
@@ -747,7 +669,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/fish-barramundi-steak.jpg',
     description: 'Fresh Australian Barramundi steaks.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fs-8', slug: 'pomfret-whole',
@@ -756,7 +677,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/fish-pomfret.jpg',
     description: 'Fresh whole Pomfret fish.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fs-9', slug: 'talapia-whole',
@@ -765,7 +685,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/fish-tilapia.jpg',
     description: 'Fresh Tilapia whole fish.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fs-10', slug: 'talapia-steak',
@@ -774,7 +693,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/fish-tilapia-steak-2.jpg',
     description: 'Fresh Tilapia steaks – premium grade.',
-    badge: 'ENQUIRE',
   },
 
   // ── PET FOOD ───────────────────────────────────────────────────────────────
@@ -785,7 +703,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/pet-food-mince.jpg',
     description: 'Nutritious pet mince tray for dogs and cats.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'pf-2', slug: 'pet-beef-marrow-bones',
@@ -794,7 +711,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/pet-food-bones.jpg',
     description: 'Raw beef marrow bones for pets.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'pf-3', slug: 'pet-lamb-marrow-bones',
@@ -803,7 +719,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/pet-lamb-marrow-bones.jpg',
     description: 'Raw lamb marrow bones for pets.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'pf-4', slug: 'pet-beef-bones',
@@ -812,7 +727,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/pet-beef-bones.jpg',
     description: 'Raw beef bones for pets.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'pf-5', slug: 'chicken-carcase',
@@ -821,7 +735,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/pet-chicken-carcass.jpg',
     description: 'Chicken carcass for pets.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'pf-6', slug: 'chicken-pet-mince',
@@ -830,7 +743,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/pet-chicken-mince.jpg',
     description: 'Freshly ground chicken mince for pets.',
-    badge: 'ENQUIRE',
   },
 
   // ── FROZEN FEET ────────────────────────────────────────────────────────────
@@ -841,7 +753,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/frozen-beef-feet.jpg',
     description: 'Frozen beef feet.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ff-2', slug: 'lamb-feets',
@@ -850,7 +761,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/frozen-lamb-feet.jpg',
     description: 'Frozen lamb feet.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ff-3', slug: 'goat-feet',
@@ -859,7 +769,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/frozen-goat-feet.jpg',
     description: 'Frozen goat feet.',
-    badge: 'ENQUIRE',
   },
 
   // ── EGGS ───────────────────────────────────────────────────────────────────
@@ -870,7 +779,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-cage-800g-tray.jpg',
     description: '900g cage eggs – tray.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-2', slug: '800g-cage-eggs-tray',
@@ -879,7 +787,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-cage-800g-tray.jpg',
     description: '800g cage eggs – tray.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-3', slug: '700g-cage-eggs-tray',
@@ -888,7 +795,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-cage-700g-tray.jpg',
     description: '700g cage eggs – tray.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-4', slug: '600g-cage-eggs-tray',
@@ -897,7 +803,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-cage-600g-tray.jpg',
     description: '600g cage eggs – tray.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-5', slug: '900g-free-range-eggs-tray',
@@ -906,7 +811,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-freerange-900g-tray.jpg',
     description: '900g free range eggs – tray.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-6', slug: '800g-free-range-eggs-tray',
@@ -915,7 +819,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-freerange-800g-tray.jpg',
     description: '800g free range eggs – tray.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-7', slug: '700g-free-range-eggs-tray',
@@ -924,7 +827,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-freerange-700g-tray.jpg',
     description: '700g free range eggs – tray.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-8', slug: '600g-free-range-eggs-tray',
@@ -933,7 +835,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-freerange-600g-tray.jpg',
     description: '600g free range eggs – tray.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-9', slug: '900g-cage-eggs-dozen',
@@ -942,7 +843,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-cage-800g-dozen.jpg',
     description: '900g cage eggs – 1 dozen.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-10', slug: '800g-cage-eggs-dozen',
@@ -951,7 +851,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-cage-800g-dozen.jpg',
     description: '800g cage eggs – 1 dozen.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-11', slug: '700g-cage-eggs-dozen',
@@ -960,7 +859,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-cage-700g-dozen.jpg',
     description: '700g cage eggs – 1 dozen.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-12', slug: '600g-cage-eggs-dozen',
@@ -969,7 +867,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-cage-600g-dozen.jpg',
     description: '600g cage eggs – 1 dozen.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-13', slug: '900g-free-range-dozen',
@@ -978,7 +875,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-freerange-900g-dozen.jpg',
     description: '900g free range eggs – 1 dozen.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-14', slug: '800g-free-range-dozen',
@@ -987,7 +883,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-freerange-800g-dozen.jpg',
     description: '800g free range eggs – 1 dozen.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-15', slug: '700g-free-range-dozen',
@@ -996,7 +891,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-freerange-700g-dozen.jpg',
     description: '700g free range eggs – 1 dozen.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'eg-16', slug: '600g-free-range-dozen',
@@ -1005,7 +899,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/eggs-freerange-600g-dozen.jpg',
     description: '600g free range eggs – 1 dozen.',
-    badge: 'ENQUIRE',
   },
 
   // ── FROZEN PRODUCTS ────────────────────────────────────────────────────────
@@ -1016,7 +909,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/frozen-rohu-steak.jpg',
     description: 'Frozen whole Rohu fish.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fp-2', slug: 'frozen-rohu-steak',
@@ -1025,7 +917,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/frozen-rohu-steak.jpg',
     description: 'Frozen Rohu fish steaks.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fp-3', slug: 'frozen-basa-steak',
@@ -1034,7 +925,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/frozen-basa-fillets.jpg',
     description: 'Frozen Basa fish steaks.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fp-4', slug: 'frozen-basa-whole',
@@ -1043,7 +933,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/frozen-basa-whole.jpg',
     description: 'Frozen whole Basa fish.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fp-5', slug: 'frozen-basa-fillets',
@@ -1052,7 +941,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/frozen-basa-fillets.jpg',
     description: 'Frozen Basa fish fillets.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fp-6', slug: 'frozen-barramundi-whole',
@@ -1061,7 +949,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/frozen-barramundi-steak.jpg',
     description: 'Frozen whole Barramundi.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fp-7', slug: 'frozen-barramundi-steak',
@@ -1070,7 +957,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/frozen-barramundi-steak.jpg',
     description: 'Frozen Barramundi steaks.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fp-8', slug: 'frozen-pomfret-whole',
@@ -1079,7 +965,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/frozen-basa-whole.jpg',
     description: 'Frozen whole Pomfret fish.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fp-9', slug: 'frozen-talapia-whole',
@@ -1088,7 +973,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/frozen-tilapia-steak.jpg',
     description: 'Frozen Tilapia whole fish.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fp-10', slug: 'frozen-talapia-steak',
@@ -1097,7 +981,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/frozen-tilapia-steak.jpg',
     description: 'Frozen Tilapia steaks – premium grade.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fp-11', slug: 'chicken-berger',
@@ -1106,7 +989,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-nuggets.jpg',
     description: 'Frozen chicken burgers.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fp-12', slug: 'chicken-nuggets',
@@ -1115,7 +997,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-nuggets.jpg',
     description: 'Frozen chicken nuggets.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'fp-13', slug: 'chicken-fingers',
@@ -1124,7 +1005,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/chicken-nuggets.jpg',
     description: 'Frozen chicken fingers.',
-    badge: 'ENQUIRE',
   },
 
   // ── GROCERY ────────────────────────────────────────────────────────────────
@@ -1135,7 +1015,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/grocery-masala.jpg',
     description: 'Shan masala spice blends.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'gr-2', slug: 'ginger-and-garlic-paste-1ltr',
@@ -1144,7 +1023,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/grocery-paste.jpg',
     description: 'Ginger and garlic paste – 1 litre.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'gr-3', slug: 'noodles-box',
@@ -1153,7 +1031,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/grocery-noodles.jpg',
     description: 'Noodles – box.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'gr-4', slug: 'fried-onion-1kg',
@@ -1162,7 +1039,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/grocery-fried-onion.jpg',
     description: 'Crispy fried onion – 1kg pack.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'gr-5', slug: 'soya-chaap',
@@ -1171,7 +1047,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/soya-chaap.jpg',
     description: 'Soya Chaap – ready to cook.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'gr-6', slug: 'soya-tikka-chaap',
@@ -1180,7 +1055,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/soya-tikka-chaap.jpg',
     description: 'Soya Tikka Chaap – ready to cook.',
-    badge: 'ENQUIRE',
   },
 
   // ── MARINATED FISH ─────────────────────────────────────────────────────────
@@ -1191,7 +1065,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/marinated-basa-fillets.jpg',
     description: 'Marinated Basa fillets – seasoned and ready to cook.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mf-2', slug: 'marinated-baramundi-fish-steak',
@@ -1200,7 +1073,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/marinated-barramundi-steak.jpg',
     description: 'Marinated Barramundi fish steak – seasoned and ready to cook.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mf-3', slug: 'marinated-pomfret-whole',
@@ -1209,7 +1081,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/marinated-pomfret-whole.jpg',
     description: 'Marinated whole Pomfret fish – seasoned and ready to cook.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mf-4', slug: 'marinated-talapia-steak',
@@ -1218,7 +1089,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/marinated-tilapia-steak.jpg',
     description: 'Marinated Tilapia steak – seasoned and ready to cook.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mf-5', slug: 'marinated-basa-steak',
@@ -1227,7 +1097,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/marinated-basa-steak.jpg',
     description: 'Marinated Basa steak – seasoned and ready to cook.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mf-6', slug: 'marinated-rohu-steak',
@@ -1236,72 +1105,64 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/marinated-rohu-steak.jpg',
     description: 'Marinated Rohu steak – seasoned and ready to cook.',
-    badge: 'ENQUIRE',
   },
 
   // ── MARINATED CHICKEN ──────────────────────────────────────────────────────
   {
     id: 'mc-1', slug: 'marinated-chicken-drummets-honey-soy',
-    name: 'MARINATED CHICKEN DRUMMETS HONEY SOY',
+    name: 'Marinated Chicken Drumettes Honey Soy',
     category: 'marinated-chicken', origin: 'Australia', cut: 'Drumettes',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-drummets-honey-soy.jpg',
     description: 'Marinated chicken drumettes in honey soy sauce.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-2', slug: 'marinated-chicken-drummets-herb-garlic-chilli',
-    name: 'MARINATED CHICKEN DRUMMETS HERB GARLIC AND CHILLI',
+    name: 'Marinated Chicken Drumettes Herb Garlic and Chilli',
     category: 'marinated-chicken', origin: 'Australia', cut: 'Drumettes',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-drummets-herb-garlic-chilli.jpg',
     description: 'Marinated chicken drumettes in herb, garlic and chilli.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-3', slug: 'marinated-chicken-drummets-tandoori',
-    name: 'MARINATED CHICKEN DRUMMETS TANDOORI',
+    name: 'Marinated Chicken Drumettes Tandoori',
     category: 'marinated-chicken', origin: 'Australia', cut: 'Drumettes',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-drummets-tandoori.jpg',
     description: 'Marinated chicken drumettes in tandoori spices.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-4', slug: 'marinated-chicken-drummets-peri-peri',
-    name: 'MARINATED CHICKEN DRUMMETS PERI PERI',
+    name: 'Marinated Chicken Drumettes Peri Peri',
     category: 'marinated-chicken', origin: 'Australia', cut: 'Drumettes',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-drummets-peri-peri.jpg',
     description: 'Marinated chicken drumettes in peri peri sauce.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-5', slug: 'marinated-chicken-drummets-lemon-pepper',
-    name: 'MARINATED CHICKEN DRUMMETS LEMON PEPPER',
+    name: 'Marinated Chicken Drumettes Lemon Pepper',
     category: 'marinated-chicken', origin: 'Australia', cut: 'Drumettes',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-drummets-lemon-pepper.jpg',
     description: 'Marinated chicken drumettes in lemon pepper seasoning.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-6', slug: 'marinated-chicken-drummets-hot-buffalo-chilli',
-    name: 'MARINATED CHICKEN DRUMMETS HOT BUFFALO CHILLI',
+    name: 'Marinated Chicken Drumettes Hot Buffalo Chilli',
     category: 'marinated-chicken', origin: 'Australia', cut: 'Drumettes',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-drummets-buffalo-chilli.jpg',
     description: 'Marinated chicken drumettes in hot buffalo chilli sauce.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-7', slug: 'plain-drummets',
-    name: 'PLAIN DRUMMETS',
+    name: 'Plain Drumettes',
     category: 'marinated-chicken', origin: 'Australia', cut: 'Drumettes',
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-drummets-plain.jpg',
     description: 'Plain chicken drumettes – no marinade.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-8', slug: 'marinated-chicken-fillets-achari',
@@ -1310,7 +1171,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-fillets-achari.jpg',
     description: 'Marinated chicken fillets in Achari spices.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-9', slug: 'marinated-chicken-fillets-pakistani-bihari-boti',
@@ -1319,7 +1179,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-fillets-bihari-boti.jpg',
     description: 'Marinated chicken fillets in Pakistani Bihari Boti spices.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-10', slug: 'marinated-chicken-fillets-afgani',
@@ -1328,7 +1187,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-fillets-afgani.jpg',
     description: 'Marinated chicken fillets in Afgani style.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-11', slug: 'marinated-chicken-fillets-desi',
@@ -1337,7 +1195,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-fillets-desi.jpg',
     description: 'Marinated chicken fillets in Desi style.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-12', slug: 'marinated-chicken-fillets-hara-bhara',
@@ -1346,7 +1203,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-fillets-hara-bhara.jpg',
     description: 'Marinated chicken fillets in Hara Bhara (green herb) marinade.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-13', slug: 'marinated-chicken-fillets-tandoori-tikka',
@@ -1355,7 +1211,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-fillets-tandoori-tikka.jpg',
     description: 'Marinated chicken fillets in Tandoori Tikka spices.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-14', slug: 'marinated-chicken-fillets-tarneit-special',
@@ -1373,7 +1228,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-fillets-lal-murgh-malai.jpg',
     description: 'Marinated chicken fillets in Lal Murgh Malai – rich cream and spice marinade.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-16', slug: 'marinated-chicken-fillets-garlic-butter',
@@ -1382,7 +1236,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-fillets-garlic-butter.jpg',
     description: 'Marinated chicken fillets in garlic butter sauce.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-17', slug: 'marinated-chicken-with-bone-tarneit-special',
@@ -1400,7 +1253,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-bone-achari.jpg',
     description: 'Marinated bone-in chicken in Achari spices.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-19', slug: 'marinated-chicken-drumsticks-tandoori',
@@ -1409,7 +1261,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-drumsticks-tandoori.jpg',
     description: 'Marinated chicken drumsticks in Tandoori spices.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-20', slug: 'marinated-chicken-drumsticks-achari',
@@ -1418,7 +1269,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-drumsticks-achari.jpg',
     description: 'Marinated chicken drumsticks in Achari spices.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'mc-21', slug: 'marinated-chicken-biryani',
@@ -1427,7 +1277,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/mc-chicken-biryani.jpg',
     description: 'Marinated chicken biryani pieces – seasoned with traditional biryani spices.',
-    badge: 'ENQUIRE',
   },
 
   // ── VEGETARIAN MARINATES ───────────────────────────────────────────────────
@@ -1494,7 +1343,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/ml-bbq-spicy-indian.jpg',
     description: 'Marinated lamb BBQ in spicy Indian style marinade.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ml-2', slug: 'marinated-lamb-bbq-moroccan',
@@ -1503,7 +1351,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/ml-bbq-moroccan.jpg',
     description: 'Marinated lamb BBQ in Moroccan style marinade.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ml-3', slug: 'marinated-lamb-bbq-honey-rosemary',
@@ -1512,7 +1359,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/ml-bbq-honey-rosemary.jpg',
     description: 'Marinated lamb BBQ in honey and rosemary marinade.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ml-4', slug: 'marinated-lamb-cutlets-spicy-indian',
@@ -1521,7 +1367,6 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/ml-cutlets-spicy-indian.jpg',
     description: 'Marinated lamb cutlets in spicy Indian style marinade.',
-    badge: 'ENQUIRE',
   },
   {
     id: 'ml-5', slug: 'marinated-lamb-loin-chops-spicy-indian',
@@ -1530,6 +1375,5 @@ export const products: Product[] = [
     price: 0, rating: 4.8, reviewCount: 0, inStock: true, enquireOnly: true,
     image: '/images/ml-loin-chops-spicy-indian.jpg',
     description: 'Marinated lamb loin chops in spicy Indian style marinade.',
-    badge: 'ENQUIRE',
   },
 ];

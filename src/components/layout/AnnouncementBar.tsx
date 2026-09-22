@@ -1,19 +1,41 @@
-const announcements = [
-  '★ FREE delivery + FREE 2x AUS Grass-Fed Burgers with every whole carcass – Shop now',
-  '★ 100% free returns & replacements because you deserve only the best!',
-  '★ Fresh AUS Angus and AUS Wagyu beef delivered within 1 hour across Melbourne.',
-  '★ Delivered fresh within 1 hour across Melbourne all days of the week.',
-];
+import { SITE_CONFIG } from '../../config/siteConfig';
 
+// Static single-line utility bar replacing the old marquee animation.
+// Displays delivery zone list and phone number.
+// Motion reduced to zero — no animation, no scroll loop.
 export default function AnnouncementBar() {
-  const doubled = [...announcements, ...announcements];
+  const zones = SITE_CONFIG.deliveryZones.join(' · ');
   return (
-    <div style={{ background: 'var(--accent-deep)', color: '#fff', height: 32, overflow: 'hidden', position: 'relative' }}>
-      <div className="marquee-track" style={{ display: 'flex', whiteSpace: 'nowrap', height: '100%', alignItems: 'center', width: 'max-content' }}>
-        {doubled.map((a, i) => (
-          <span key={i} style={{ padding: '0 40px', fontSize: 12, fontWeight: 500 }}>{a}</span>
-        ))}
-      </div>
+    <div
+      style={{
+        background: 'var(--accent-deep)',
+        color: '#fff',
+        height: 34,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
+      }}
+    >
+      <p
+        style={{
+          fontSize: 12,
+          fontWeight: 500,
+          margin: 0,
+          whiteSpace: 'nowrap',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          padding: '0 16px',
+        }}
+      >
+        Free delivery over ${SITE_CONFIG.deliveryFreeOver} · Delivering to: {zones} ·{' '}
+        <a
+          href={`tel:${SITE_CONFIG.phoneRaw}`}
+          style={{ color: 'inherit', textDecoration: 'underline', textUnderlineOffset: 2 }}
+        >
+          {SITE_CONFIG.phoneDisplay}
+        </a>
+      </p>
     </div>
   );
 }
