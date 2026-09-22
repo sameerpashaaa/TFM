@@ -75,7 +75,7 @@ export default function ShopByCuts() {
             className="scrollbar-none"
           >
             {cuts.map((cut, i) => (
-              <Link key={i} to={`/collections/all-beef?cut=${encodeURIComponent(cut)}`}
+              <Link key={i} to={`/collections/beef?cut=${encodeURIComponent(cut)}`}
                 style={{ textDecoration: 'none', flexShrink: 0, scrollSnapAlign: 'start' }}>
                 <div 
                   className="surface"

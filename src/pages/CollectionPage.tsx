@@ -3,24 +3,12 @@ import { useParams, useSearchParams, Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, X, SlidersHorizontal } from 'lucide-react';
 import { DataService } from '../services/api';
 import type { Product } from '../data/products';
-import { categories, cuts } from '../data/categories';
+import { categories, navCategories } from '../data/categories';
 import ProductCard from '../components/shared/ProductCard';
 
-const origins = ['Australia', 'New Zealand', 'South Africa', 'Japan', 'United States'];
 const sortOptions = ['Featured', 'Price: Low to High', 'Price: High to Low', 'Best Selling', 'Newest'];
 
-const beefSubCategories = [
-  { label: 'All Beef', slug: 'all-beef' },
-  { label: 'Wagyu Beef', slug: 'australian-wagyu-beef' },
-  { label: 'Black Angus', slug: 'australian-black-angus-beef' },
-  { label: 'Beef Steaks', slug: 'beef-steaks' },
-  { label: 'Beef Mince', slug: 'beef-mince' },
-  { label: 'Beef Ribs', slug: 'beef-ribs' },
-  { label: 'Beef Brisket', slug: 'beef-brisket' },
-  { label: 'Beef Skewers', slug: 'beef-mishkak-fondue' },
-  { label: 'Beef Sausages', slug: 'all-sausages' },
-  { label: 'Dry Aged Beef', slug: 'dry-aged-beef' }
-];
+
 
 function FilterSection({ title, children, defaultOpen = true }: { title: string; children: React.ReactNode; defaultOpen?: boolean }) {
   const [open, setOpen] = useState(defaultOpen);
@@ -36,7 +24,7 @@ function FilterSection({ title, children, defaultOpen = true }: { title: string;
   );
 }
 
-function FilterContent({ selectedOrigins, toggleOrigin, selectedCuts, toggleCut, maxPrice, setMaxPrice, onClear }: {
+function FilterContent({ selectedOrigins, toggleOrigin, selectedCuts, toggleCut, maxPrice, setMaxPrice, onClear, availableOrigins, availableCuts }: {
   selectedOrigins: string[];
   toggleOrigin: (o: string) => void;
   selectedCuts: string[];
@@ -44,6 +32,8 @@ function FilterContent({ selectedOrigins, toggleOrigin, selectedCuts, toggleCut,
   maxPrice: number;
   setMaxPrice: (v: number) => void;
   onClear: () => void;
+  availableOrigins: string[];
+  availableCuts: string[];
 }) {
   return (
     <>
@@ -55,23 +45,31 @@ function FilterContent({ selectedOrigins, toggleOrigin, selectedCuts, toggleCut,
         <input type="range" min={0} max={250} step={5} value={maxPrice} onChange={e => setMaxPrice(Number(e.target.value))} />
       </FilterSection>
 
-      <FilterSection title="Shop by Origin">
-        {origins.map(o => (
-          <label key={o} className="custom-checkbox" style={{ marginBottom: 10 }}>
-            <input type="checkbox" checked={selectedOrigins.includes(o)} onChange={() => toggleOrigin(o)} />
-            <span style={{ fontSize: 13, color: '#4A423B' }}>{o}</span>
-          </label>
-        ))}
-      </FilterSection>
+      {availableOrigins.length > 0 && (
+        <FilterSection title="Shop by Origin">
+          <div style={{ maxHeight: 200, overflowY: 'auto' }}>
+            {availableOrigins.map(o => (
+              <label key={o} className="custom-checkbox" style={{ marginBottom: 10, display: 'block' }}>
+                <input type="checkbox" checked={selectedOrigins.includes(o)} onChange={() => toggleOrigin(o)} />
+                <span style={{ fontSize: 13, color: '#4A423B', marginLeft: 8 }}>{o}</span>
+              </label>
+            ))}
+          </div>
+        </FilterSection>
+      )}
 
-      <FilterSection title="Shop by Cuts">
-        {cuts.slice(0, 8).map(c => (
-          <label key={c} className="custom-checkbox" style={{ marginBottom: 10 }}>
-            <input type="checkbox" checked={selectedCuts.includes(c)} onChange={() => toggleCut(c)} />
-            <span style={{ fontSize: 13, color: '#4A423B' }}>{c}</span>
-          </label>
-        ))}
-      </FilterSection>
+      {availableCuts.length > 0 && (
+        <FilterSection title="Shop by Cuts">
+          <div style={{ maxHeight: 250, overflowY: 'auto' }}>
+            {availableCuts.map(c => (
+              <label key={c} className="custom-checkbox" style={{ marginBottom: 10, display: 'block' }}>
+                <input type="checkbox" checked={selectedCuts.includes(c)} onChange={() => toggleCut(c)} />
+                <span style={{ fontSize: 13, color: '#4A423B', marginLeft: 8 }}>{c}</span>
+              </label>
+            ))}
+          </div>
+        </FilterSection>
+      )}
 
       {(selectedOrigins.length > 0 || selectedCuts.length > 0 || maxPrice < 250) && (
         <button onClick={onClear}
@@ -89,6 +87,11 @@ export default function CollectionPage() {
   const searchQuery = searchParams.get('q') || '';
   const category = categories.find(c => c.slug === slug);
 
+  const activeNavCategory = navCategories.find(nav => 
+    nav.slug === slug || nav.subCategories?.some(sub => sub.slug === slug)
+  );
+  const subCategoryPills = activeNavCategory?.subCategories || [];
+
   const [rawProducts, setRawProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedOrigins, setSelectedOrigins] = useState<string[]>([]);
@@ -105,7 +108,6 @@ export default function CollectionPage() {
     });
   }, [slug, searchQuery]);
 
-  // Lock body scroll when mobile filter drawer is open
   useEffect(() => {
     if (mobileFilterOpen) {
       document.body.classList.add('scroll-locked');
@@ -114,6 +116,16 @@ export default function CollectionPage() {
     }
     return () => document.body.classList.remove('scroll-locked');
   }, [mobileFilterOpen]);
+
+  const availableOrigins = useMemo(() => {
+    const set = new Set(rawProducts.map(p => p.origin));
+    return Array.from(set).filter(Boolean).sort();
+  }, [rawProducts]);
+
+  const availableCuts = useMemo(() => {
+    const set = new Set(rawProducts.map(p => p.cut));
+    return Array.from(set).filter(Boolean).sort();
+  }, [rawProducts]);
 
   const toggleOrigin = (o: string) => setSelectedOrigins(prev => prev.includes(o) ? prev.filter(x => x !== o) : [...prev, o]);
   const toggleCut = (c: string) => setSelectedCuts(prev => prev.includes(c) ? prev.filter(x => x !== c) : [...prev, c]);
@@ -151,27 +163,29 @@ export default function CollectionPage() {
           <p style={{ color: '#7C7268', fontSize: 14, maxWidth: 620, margin: '0 auto 20px' }}>{desc}</p>
 
           {/* Subcategory Pills */}
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'center', maxWidth: 900, margin: '0 auto' }}>
-            {beefSubCategories.map(sub => (
-              <Link
-                key={sub.slug}
-                to={`/collections/${sub.slug}`}
-                style={{
-                  fontSize: 12,
-                  fontWeight: 600,
-                  padding: '6px 14px',
-                  borderRadius: 20,
-                  textDecoration: 'none',
-                  background: slug === sub.slug ? 'var(--crimson)' : '#FAF6F1',
-                  color: slug === sub.slug ? '#fff' : '#4A423B',
-                  border: `1px solid ${slug === sub.slug ? 'var(--crimson)' : '#E8DFD4'}`,
-                  transition: 'all 0.2s',
-                }}
-              >
-                {sub.label}
-              </Link>
-            ))}
-          </div>
+          {subCategoryPills.length > 0 && (
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'center', maxWidth: 900, margin: '0 auto' }}>
+              {subCategoryPills.map(sub => (
+                <Link
+                  key={sub.slug}
+                  to={`/collections/${sub.slug}`}
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 600,
+                    padding: '6px 14px',
+                    borderRadius: 20,
+                    textDecoration: 'none',
+                    background: slug === sub.slug ? 'var(--crimson)' : '#FAF6F1',
+                    color: slug === sub.slug ? '#fff' : '#4A423B',
+                    border: `1px solid ${slug === sub.slug ? 'var(--crimson)' : '#E8DFD4'}`,
+                    transition: 'all 0.2s',
+                  }}
+                >
+                  {sub.name}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
@@ -211,6 +225,8 @@ export default function CollectionPage() {
               maxPrice={maxPrice}
               setMaxPrice={setMaxPrice}
               onClear={clearAll}
+              availableOrigins={availableOrigins}
+              availableCuts={availableCuts}
             />
           </aside>
 
@@ -258,6 +274,8 @@ export default function CollectionPage() {
               maxPrice={maxPrice}
               setMaxPrice={setMaxPrice}
               onClear={clearAll}
+              availableOrigins={availableOrigins}
+              availableCuts={availableCuts}
             />
             <button
               onClick={() => setMobileFilterOpen(false)}

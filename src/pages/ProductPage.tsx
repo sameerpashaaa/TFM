@@ -79,7 +79,7 @@ export default function ProductPage() {
     return (
       <div style={{ textAlign: 'center', padding: '80px 20px' }}>
         <h2>Product not found</h2>
-        <Link to="/collections/all-beef" className="btn-red" style={{ marginTop: 16, display: 'inline-flex' }}>Browse Products</Link>
+        <Link to="/collections/beef" className="btn-red" style={{ marginTop: 16, display: 'inline-flex' }}>Browse Products</Link>
       </div>
     );
   }

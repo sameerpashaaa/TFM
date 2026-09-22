@@ -289,12 +289,18 @@ function LambRackArt() {
 
 const ART: Record<string, () => ReactElement> = {
   'all-beef': CowArt,
+  'beef': CowArt,
   'all-lamb': LambArt,
+  'lamb': LambArt,
   'mls-poultry': ChickenArt,
   'tfm-poultry': ChickenArt,
   'poultry-camel': ChickenArt,
+  'poultry': ChickenArt,
+  'chicken': ChickenArt,
   'whole-carcass': ButcherChartArt,
+  'carcass': ButcherChartArt,
   'box-collection': BoxArt,
+  'box': BoxArt,
   'seasoned': SkewerArt,
   'dry-aged-beef': TomahawkArt,
   'dry-aged-lamb': LambRackArt,

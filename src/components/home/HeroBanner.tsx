@@ -437,7 +437,7 @@ export default function HeroBanner() {
           </p>
 
           <Link
-            to="/collections/all-beef"
+            to="/collections/beef"
             className="btn-red"
             style={{ width: 'fit-content', padding: '14px 32px', fontSize: 12, letterSpacing: 1.4 }}
           >
